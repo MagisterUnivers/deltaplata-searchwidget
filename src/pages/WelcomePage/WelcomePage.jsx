@@ -15,7 +15,7 @@ import '../../components/Section/Section.style.scss';
 
 export const WelcomePage = () => {
 	return (
-		<section className="section">
+		<section className="section" aria-label="welcome section">
 			<div className="container no-flex">
 				<div className="title-wrapper push-content">
 					<div className="title-wrapper no-wrap">

@@ -34,7 +34,8 @@
 .hero-search {
 	display: flex;
 	align-items: center;
-	width: 100%;
+	// width: 100%;
+	min-width: 457px;
 	height: auto;
 	position: relative;
 

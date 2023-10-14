@@ -3,7 +3,7 @@ import '../Filter/Filter.style.scss';
 import './DateFilter.style.scss';
 
 export const DateFilter = () => {
-	const [dataValueFrom, SetDataValueFrom] = useState('2023-07-25'); //eslint-disable-line
+	const [dataValueFrom, SetDataValueFrom] = useState('2023-07-24'); //eslint-disable-line
 	const [dataValueTo, SetDataValueTo] = useState('2023-08-30'); //eslint-disable-line
 
 	const handleDateChange = (e) => {

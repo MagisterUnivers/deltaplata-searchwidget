@@ -1,13 +1,14 @@
-import { mockMetaTags } from '../../constants/mockData';
 import { ReactComponent as Hash } from '../../assets/svg/hash.svg';
-import './RecentSearch.style.scss';
+import './HashViewComponent.style.scss';
 
-export const RecentSearch = () => {
+export const HashViewComponent = ({ type, data }) => {
 	return (
 		<div className="recentsearch-container">
-			<h2 className="recentsearch-title">Recent Searches</h2>
+			<h2 className="recentsearch-title">
+				{type === 'recentviewed' ? 'Recent Searches' : 'Lasted Data Viewed'}
+			</h2>
 			<ul className="recentsearch-subtext__list">
-				{mockMetaTags.map((e) => {
+				{data.map((e) => {
 					return (
 						<li key={e} className="recentsearch-list__item">
 							<Hash width={16} height={16} />{' '}

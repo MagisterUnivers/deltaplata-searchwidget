@@ -1,3 +1,3 @@
 export const PublicRoute = ({ children }) => {
-	return children;
+  return children;
 };

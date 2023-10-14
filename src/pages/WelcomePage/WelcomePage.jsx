@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const WelcomePage = () => {
-	return <div>WelcomePage</div>;
+  return <div>WelcomePage</div>;
 };
 
 export default WelcomePage;

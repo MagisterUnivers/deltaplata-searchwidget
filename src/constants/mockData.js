@@ -10,3 +10,12 @@ export const mockSortOptions = [
 	'Bookmarked',
 	'Not bookmarked yet'
 ];
+
+export const mockMetaTags = [
+	'Ukraine',
+	'Draeger',
+	'Oliver Barnard Draeger',
+	'PBG-Project Building Generals',
+	'Michael John',
+	'Mark Lindon'
+];

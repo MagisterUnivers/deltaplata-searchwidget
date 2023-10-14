@@ -2,6 +2,7 @@
 // import { MockFilterOptions, mockSortOptions } from '../../constants/mockData';
 // import { Bulk } from '../../components/Bulk/Bulk';
 // import { RecentSearch } from '../../components/RecentSearch/RecentSearch';
+import { Hero } from '../../components/Hero/Hero';
 
 export const WelcomePage = () => {
 	return (
@@ -9,6 +10,7 @@ export const WelcomePage = () => {
 			{/* <Filter type="filter" data={MockFilterOptions} />
 			<Filter type="sort" data={mockSortOptions} /> */}
 			{/* <RecentSearch /> */}
+			<Hero />
 		</section>
 	);
 };

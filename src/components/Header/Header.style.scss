@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: center;
 
-  border-radius: 50%;
-  border-color: 1px solid var(--main-border-color);
+  border-radius: 500px;
+  border: 1px solid var(--main-border-color);
   background-color: var(--main-darkBG-color);
 }
 
@@ -42,7 +42,7 @@
   gap: 8px;
 
   border-radius: 50px;
-  border-color: 1px solid var(--main-border-color);
+  border: 1px solid var(--main-border-color);
 }
 
 .header-bg {

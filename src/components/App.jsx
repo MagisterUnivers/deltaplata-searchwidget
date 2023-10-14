@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router';
+import { Route, Routes, Navigate } from 'react-router';
 import { PublicRoute } from '../components/routes/PublicRoute';
 import { Layout } from '../components/Layout/Layout';
 import WelcomePage from '../pages/WelcomePage/WelcomePage';
@@ -28,7 +28,7 @@ export const App = () => {
 						}
 					/>
 				</Route>
-				<Route path="*" element={<WelcomePage />} />
+				<Route path="*" element={<Navigate to="/home" />} />
 			</Routes>
 		</>
 	);

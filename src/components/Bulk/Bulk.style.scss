@@ -1,0 +1,54 @@
+.bulk-uploader {
+	display: flex;
+	width: 285px;
+	padding: 16px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+
+	border-radius: 8px;
+	border: 1px solid var(--main-border-color);
+}
+
+.bulk-title {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: calc(23.4 / 18);
+}
+
+.bulk-header__section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.bulk-subtext {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: calc(15.6 / 12);
+
+	color: var(--main-mute-color);
+}
+
+.bulk-header__container {
+	display: flex;
+
+	&:first-of-type {
+		gap: 4px;
+	}
+}
+
+.bulk-uploader__container {
+	width: 100%;
+	display: flex;
+	padding: 16px;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	align-self: stretch;
+
+	border-radius: 8px;
+	background: var(--main-whiteBG-color);
+}

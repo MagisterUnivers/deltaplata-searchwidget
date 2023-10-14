@@ -3,7 +3,7 @@ import './Filter.style.scss';
 
 export const Filter = ({ type, data }) => {
 	return (
-		<div className="filter-container" style={{ marginTop: '100px' }}>
+		<div className="filter-container">
 			<p className="filter-subtext">
 				{type === 'filter' ? 'Filter by' : 'Sort by'}
 			</p>

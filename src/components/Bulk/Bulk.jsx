@@ -5,7 +5,7 @@ import './Bulk.style.scss';
 
 export const Bulk = () => {
 	return (
-		<div className="bulk-uploader" style={{ marginTop: '100px' }}>
+		<div className="bulk-uploader">
 			<div className="bulk-header__section">
 				<div className="bulk-header__container">
 					<h2 className="bulk-title">Bulk Upload</h2>

@@ -1,4 +1,10 @@
-import { Route, Routes, Navigate, useNavigate } from 'react-router';
+import {
+	Route,
+	Routes,
+	Navigate,
+	useNavigate,
+	useLocation
+} from 'react-router';
 import { PublicRoute } from '../components/routes/PublicRoute';
 import { Layout } from '../components/Layout/Layout';
 import WelcomePage from '../pages/WelcomePage/WelcomePage';
@@ -8,10 +14,13 @@ import { useEffect } from 'react';
 
 export const App = () => {
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	useEffect(() => {
-		navigate('/home');
-	}, [navigate]);
+		if (location.pathname !== '/home') {
+			navigate('/home');
+		}
+	}, [navigate, location]);
 
 	return (
 		<>

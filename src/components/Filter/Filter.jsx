@@ -1,3 +1,4 @@
+import { Select } from '../Select/Select';
 import './Filter.style.scss';
 
 export const Filter = ({ type, data }) => {
@@ -6,9 +7,20 @@ export const Filter = ({ type, data }) => {
 			<p className="filter-subtext">
 				{type === 'filter' ? 'Filter by' : 'Sort by'}
 			</p>
-			<select className="filter-select__menu">
+			{/* <select className="filter-select__menu">
 				<option value="default">
-					{type === 'filter' ? 'Type' : 'Lasted Updated'}
+					{(() => {
+						switch (type) {
+							case 'filter':
+								return 'Type';
+							case 'sort':
+								return 'Lasted Updated';
+							case 'country':
+								return 'Netherlands';
+							default:
+								return 'Type';
+						}
+					})()}
 				</option>
 				{data?.map((data) => {
 					return (
@@ -17,7 +29,8 @@ export const Filter = ({ type, data }) => {
 						</option>
 					);
 				})}
-			</select>
+			</select> */}
+			<Select type={type} data={data} />
 		</div>
 	);
 };

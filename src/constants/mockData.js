@@ -19,3 +19,30 @@ export const mockMetaTags = [
 	'Michael John',
 	'Mark Lindon'
 ];
+
+export const mockSpecialFilterTags = [
+	'Crime',
+	'Warmongers',
+	'Bribetakers',
+	'Spy',
+	'Theft',
+	'War crimes',
+	'Terrorism',
+	'Criminal leadership',
+	'Debarred entity',
+	'Judge',
+	'Financial crime',
+	'Intergovernmental Organization',
+	'Offshore',
+	'Person of interest',
+	'Political party mock',
+	'Political party mock',
+	'Political party mock',
+	'Political party mock',
+	'Political party mock',
+	'Political party mock',
+	'Political party mock',
+	'Political party mock'
+];
+
+export const mockCountryFilter = ['Netherlands', 'Britain', 'USA', 'Germany'];

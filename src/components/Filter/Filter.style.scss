@@ -1,0 +1,37 @@
+.filter-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.filter-subtext {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: calc(15.6 / 12);
+}
+
+.filter-select__menu {
+	display: flex;
+	width: 150px;
+	padding: 8px;
+	justify-content: space-between;
+	align-items: center;
+
+	border-radius: 4px;
+	border: 1px solid var(--main-border-color);
+
+	background: transparent url('../../assets//svg//chevron-down.svg') no-repeat
+		right center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	// select {
+	// 	padding: 20px;
+	// }
+
+	// select option {
+	// 	background-color: green;
+	// }
+}

@@ -1,7 +1,8 @@
 .container {
-  display: flex;
-  width: 1440px;
-  padding: 16px 120px;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	width: 1440px;
+	padding: 16px 120px;
+	// justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
 }

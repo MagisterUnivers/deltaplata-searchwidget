@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import { Title } from '../../components/Title/Title';
 import { DateFilter } from '../../components/DateFilter/DateFilter';
 import { Button } from '../../components/Button/Button';
@@ -9,6 +10,8 @@ import './SearchHistoryPage.style.scss';
 import '../WelcomePage/WelcomePage.style.scss';
 
 export const SearchHistoryPage = () => {
+	const navigate = useNavigate();
+
 	return (
 		<section className="section" aria-label="search history section">
 			<div className="container no-flex">
@@ -34,11 +37,16 @@ export const SearchHistoryPage = () => {
 									.filter((item) => item.date === '2023-07-25')
 									.map((item) => (
 										<tr key={item.number}>
-											<td className="table-subtext underline">{item.name}</td>
+											<td className="table-subtext underline">
+												<Link to="/home">{item.name}</Link>
+											</td>
 											<td className="table-subtext">{item.type}</td>
 											<td className="table-subtext">{item.number}</td>
 											<td className="table-subtext">{item.time}</td>
-											<td className="table-link__item">
+											<td
+												className="table-link__item link-pointer"
+												onClick={() => navigate('/home')}
+											>
 												<p className="table-subtext__link">Search again</p>
 												<ArrowRight width={16} height={16} />
 											</td>
@@ -62,11 +70,16 @@ export const SearchHistoryPage = () => {
 									.filter((item) => item.date === '2023-07-24')
 									.map((item) => (
 										<tr key={item.number}>
-											<td className="table-subtext underline">{item.name}</td>
+											<td className="table-subtext underline">
+												<Link to="/home">{item.name}</Link>
+											</td>
 											<td className="table-subtext">{item.type}</td>
 											<td className="table-subtext">{item.number}</td>
 											<td className="table-subtext">{item.time}</td>
-											<td className="table-link__item">
+											<td
+												className="table-link__item link-pointer"
+												onClick={() => navigate('/home')}
+											>
 												<p className="table-subtext__link">Search again</p>
 												<ArrowRight width={16} height={16} />
 											</td>

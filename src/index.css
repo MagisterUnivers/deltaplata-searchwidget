@@ -1,7 +1,8 @@
+@import-normalize;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Roboto",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,4 +11,84 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/**
+  |============================
+  | Fonts
+  |============================
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap");
+
+/* Poppins: 400 - regular, 500 - medium, 600 - semiBold */
+
+:root {
+  /* Colors */
+  --main-white-color: #ffffff;
+  --main-heading-color: #141413;
+  --main-text-color: #4b5359;
+  --main-darkBG-color: #141413;
+  --main-whiteBG-color: #f4f4f4;
+  --main-border-color: #b8c0c8;
+  --main-mute-color: #777f86;
+  --main-accent1-color: #eef7ff;
+  --main-accent2-color: #e3dbfa;
+  --main-accent3-color: #ffedfe;
+  --main-accent4-color: #d4f6ed;
+  --main-accent5-color: #ffe1cc;
+  --main-accent6-color: #ffe1cc;
+}
+
+/**
+  |============================
+  | RESET
+  |============================
+*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
 }

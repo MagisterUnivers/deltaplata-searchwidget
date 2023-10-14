@@ -19,13 +19,26 @@ export const SpecialFilter = () => {
 		});
 	};
 
-	// Вычисляем количество включенных чекбоксов
+	// Число включенных чекбоксов
 	const numberOfChecked = Object.values(checkedItems).filter(
 		(isChecked) => isChecked
 	).length;
 
+	const resetCheckboxes = () => {
+		const checkboxes = document.querySelectorAll(
+			'.special-filter__checkbox-item'
+		);
+		//  Выбрал все чекбоксы (айтемы)
+
+		// Прошелся по всем, и повыключал им галочки
+		checkboxes.forEach((checkbox) => {
+			checkbox.checked = false;
+		});
+	};
+
 	const handleRemoveAllFilter = () => {
 		setCheckedItems({});
+		resetCheckboxes();
 	};
 
 	return (
@@ -45,7 +58,7 @@ export const SpecialFilter = () => {
 									type="checkbox"
 									id={id}
 									defaultChecked={false}
-									checked={checkedItems[id]}
+									// checked={checkedItems[id]}
 									onChange={(event) => {
 										handleCheckboxChange(event);
 									}}

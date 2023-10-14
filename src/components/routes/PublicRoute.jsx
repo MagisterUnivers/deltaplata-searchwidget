@@ -1,7 +1,3 @@
-import React from "react";
-
-const PublicRoute = () => {
-  return <div>PublicRoute</div>;
+export const PublicRoute = ({ children }) => {
+	return children;
 };
-
-export default PublicRoute;

@@ -1,8 +1,24 @@
-import React from "react";
-import "./Header.style.scss";
+import React from 'react';
+import SearchSVG from '../../assets/svg/search.svg';
+import './Header.style.scss';
 
 const Header = () => {
-  return <h2 className="red">I am header with style</h2>;
+	return (
+		<>
+			<nav>
+				<div>
+					<button>
+						<SearchSVG />
+					</button>
+					<input />
+				</div>
+				<div>
+					<h2>Looking for more details?</h2>
+					<button></button>
+				</div>
+			</nav>
+		</>
+	);
 };
 
 export default Header;

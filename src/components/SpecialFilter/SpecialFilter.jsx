@@ -56,6 +56,7 @@ export const SpecialFilter = () => {
 					})}
 				</ul>
 			</div>
+			{/* <div className="special-filter__scrollbar"></div> */}
 			<button
 				type="button"
 				className="special-filter__button"

@@ -1,11 +1,18 @@
-import { Route, Routes, Navigate } from 'react-router';
+import { Route, Routes, Navigate, useNavigate } from 'react-router';
 import { PublicRoute } from '../components/routes/PublicRoute';
 import { Layout } from '../components/Layout/Layout';
 import WelcomePage from '../pages/WelcomePage/WelcomePage';
 import SearchPage from '../pages/SearchPage/SearchPage';
 import '../index.css';
+import { useEffect } from 'react';
 
 export const App = () => {
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		navigate('/home');
+	}, [navigate]);
+
 	return (
 		<>
 			<Routes>

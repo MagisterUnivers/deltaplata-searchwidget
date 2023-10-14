@@ -16,6 +16,9 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "standard",
+		"check-format": "prettier --check .",
+		"check-lint": "eslint . --ext jsx --ext js",
+		"format": "prettier --write .",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
@@ -35,5 +38,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"husky": "^8.0.3"
 	}
 }

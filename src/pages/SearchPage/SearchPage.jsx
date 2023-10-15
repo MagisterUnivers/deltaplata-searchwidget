@@ -61,14 +61,14 @@ const SearchPage = () => {
 					<div className="search-list__wrapper">
 						<ul className="search-list">
 							<PersonCard />
+							{/* <PersonCard />
 							<PersonCard />
 							<PersonCard />
 							<PersonCard />
 							<PersonCard />
 							<PersonCard />
 							<PersonCard />
-							<PersonCard />
-							<PersonCard />
+							<PersonCard /> */}
 						</ul>
 					</div>
 				</div>

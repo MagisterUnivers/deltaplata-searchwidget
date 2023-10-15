@@ -225,12 +225,14 @@
 	align-items: flex-start;
 	gap: 8px;
 
+	transition: box-shadow, 0.5, ease-out;
 	border-radius: 20px;
-	border: 1px solid var(--White-Color, #fff);
-	background: var(--accent-1, #f1f7fd);
+	border: 1px solid var(--main-white-color);
+	background: var(--main-accent1-color);
 
-	/* Hover Shadow */
-	box-shadow: 10px 10px 30px 0px rgba(13, 11, 30, 0.1);
+	&:hover {
+		box-shadow: 10px 10px 30px 0px rgba(13, 11, 30, 0.1);
+	}
 }
 
 .search-list__grid-container {

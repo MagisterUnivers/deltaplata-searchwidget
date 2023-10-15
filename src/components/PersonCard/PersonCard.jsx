@@ -10,7 +10,7 @@ import './PersonCard.style.scss';
 
 const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 	return (
-		<li className="main-wrapper">
+		<li className="search-list__item">
 			<div className="search-list__item-header">
 				<div className="search-list__item-subtitle-wrapper">
 					<p className="search-list__item-subtitle">30 May, 2023</p>
@@ -24,9 +24,9 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 					</div>
 				</div>
 			</div>
-			<div className="search-list__grid-container">
+			<div className="" id="grid">
 				<div className="search-list__item-body">
-					<div className="search-item__name-wrapper no-margin">
+					<div className="search-item__name-wrapper">
 						<p className="search-item__name-subtext filter-subtext">Person</p>
 						<h2 className="search-item__name-title">Nora Frey Draeger</h2>
 					</div>
@@ -67,7 +67,7 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 						})}
 					</ul>
 				</div>
-				<div className="search-item__user-info__wrapper no-margin">
+				<div className="search-item__user-info__wrapper">
 					{mockSearchHistory.map((item, index) => {
 						const { nationality, birthdate, address } = item;
 
@@ -99,7 +99,7 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 						return null;
 					})}
 				</div>
-				<div className="search-list__item-footer button-width">
+				<div className="search-list__item-footer">
 					<button
 						type="button"
 						aria-label="button to get details about user"

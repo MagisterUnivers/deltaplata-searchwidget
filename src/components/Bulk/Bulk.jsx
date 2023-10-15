@@ -17,6 +17,7 @@ export const Bulk = () => {
 					<ArrowRight
 						width={16}
 						height={16}
+						style={{ cursor: 'pointer' }}
 						onClick={() => navigate('/home')}
 					/>
 				</div>

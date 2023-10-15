@@ -45,10 +45,7 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 												</p>
 											</li>
 										))}
-										<li
-											className="search-item__tags-item search-item__tags-item__more"
-											key={remainingTags}
-										>
+										<li className="search-item__tags-item search-item__tags-item__more">
 											<p className="search-item__tag search-item__name-subtext filter-subtext">
 												+{remainingTags.length} More
 											</p>

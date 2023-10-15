@@ -25,7 +25,7 @@ const SearchPage = () => {
 				<div className="title-wrapper push-content">
 					<div className="title-wrapper no-wrap">
 						<h1 className="title-wrapper__results-title">
-							Results For:
+							Results for:
 							<span className={searchQueryClass}>{searchquery}</span>
 						</h1>
 					</div>

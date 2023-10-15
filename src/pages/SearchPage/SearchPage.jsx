@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Filter } from '../../components/Filter/Filter';
 import {
@@ -16,10 +17,16 @@ import '../../components/Section/Section.style.scss';
 import './SearchPage.style.scss';
 
 const SearchPage = () => {
+	const [cardStyle, SetCardStyle] = useState('flex');
 	const { searchquery } = useParams();
 	const searchQueryClass =
 		searchquery.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery';
 	console.log(searchquery);
+
+	function switchLayer(type) {
+		const newStyleType = type === 'flex' ? 'flex' : 'grid';
+		SetCardStyle(newStyleType);
+	}
 
 	return (
 		<section className="section" aria-label="search section">
@@ -38,6 +45,7 @@ const SearchPage = () => {
 							aria-label="switch layer to flex"
 							title="Switch to Flex View"
 							className="title-wrapper__layer-switch"
+							onClick={() => switchLayer('flex')}
 						/>
 						<GridSVG
 							width={16}
@@ -45,6 +53,7 @@ const SearchPage = () => {
 							aria-label="switch later to grid"
 							title="Switch to Grid View"
 							className="title-wrapper__layer-switch"
+							onClick={() => switchLayer('grid')}
 						/>
 					</div>
 					<div className="title-wrapper no-wrap place-to__end">
@@ -60,7 +69,7 @@ const SearchPage = () => {
 					</div>
 					<div className="search-list__wrapper">
 						<ul className="search-list">
-							<PersonCard />
+							<PersonCard style={cardStyle} />
 							{/* <PersonCard />
 							<PersonCard />
 							<PersonCard />

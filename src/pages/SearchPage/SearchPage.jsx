@@ -6,6 +6,7 @@ import {
 	mockSortOptions
 } from '../../constants/mockData';
 import { Bulk } from '../../components/Bulk/Bulk';
+import PersonCard from '../../components/PersonCard/PersonCard';
 import { HashViewComponent } from '../../components/HashViewComponent/HashViewComponent';
 import '../../components/Container/Container.style.scss';
 import '../WelcomePage/WelcomePage.style.scss';
@@ -33,15 +34,17 @@ const SearchPage = () => {
 						<Filter type="sort" data={mockSortOptions} />
 					</div>
 				</div>
-				<div className="widgets-wrapper">
-					<Bulk />
-					<HashViewComponent type="recentviewed" data={mockMetaTags} />
-					<HashViewComponent type="lastvisited" data={mockMetaTags} />
-				</div>
-				<div className="search-list__wrapper">
-					<ul className="search-list">
-						<li className="search-list__item"></li>
-					</ul>
+				<div className="search-content__wrapper">
+					<div className="widgets-wrapper">
+						<Bulk />
+						<HashViewComponent type="recentviewed" data={mockMetaTags} />
+						<HashViewComponent type="lastvisited" data={mockMetaTags} />
+					</div>
+					<div className="search-list__wrapper">
+						<ul className="search-list">
+							<PersonCard />
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>

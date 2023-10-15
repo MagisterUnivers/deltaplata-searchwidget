@@ -39,3 +39,13 @@
 	flex-wrap: wrap;
 	gap: 20px;
 }
+
+.title-wrapper__grid-selection {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.title-wrapper__layer-switch {
+	cursor: pointer;
+}

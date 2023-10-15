@@ -45,7 +45,15 @@ export const mockSpecialFilterTags = [
 	'Political party mock'
 ];
 
-export const mockCountryFilter = ['Netherlands', 'Britain', 'USA', 'Germany'];
+export const mockCountryFilter = [
+	'Netherlands',
+	'China',
+	'USA',
+	'United Kingdom',
+	'Canada',
+	'Australia',
+	'Brazil'
+];
 
 export const mockSearchHistory = [
 	{

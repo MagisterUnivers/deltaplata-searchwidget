@@ -137,9 +137,19 @@
 	gap: 8px;
 
 	border-radius: 50px;
-	color: var(--main-white-color);
-	border: 1px solid var(--main-heading-color);
-	background: var(--main-darkBG-color);
+
+	color: var(--main-heading-color);
+	border: 1px solid var(--main-darkBG-color);
+
+	&:hover {
+		color: var(--main-white-color);
+		border: 1px solid var(--main-heading-color);
+		background: var(--main-darkBG-color);
+
+		.search-item__icons {
+			fill: var(--main-white-color);
+		}
+	}
 }
 
 .search-item__icons-wrapper {

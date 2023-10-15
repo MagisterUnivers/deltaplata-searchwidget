@@ -1,7 +1,7 @@
 import { mockSearchHistory } from '../../constants/mockData';
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg';
 import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg';
-import { ReactComponent as ArrowRightSVG } from '../../assets/svg/arrow-right-white.svg';
+import { ReactComponent as ArrowRightSVG } from '../../assets/svg/arrow-right-rendered.svg';
 import { ReactComponent as CalendarSVG } from '../../assets/svg/calendar.svg';
 import { ReactComponent as MapSVG } from '../../assets/svg/map-pin-new.svg';
 import britainFlag from '../../assets/image/britain_flag.png';
@@ -104,7 +104,12 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 					aria-label="button to get details about user"
 					className="search-list__item-button filter-subtext"
 				>
-					Details <ArrowRightSVG width={16} height={16} />
+					Details{' '}
+					<ArrowRightSVG
+						width={16}
+						height={16}
+						className="search-item__icons"
+					/>
 				</button>
 			</div>
 		</li>

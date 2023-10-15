@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { nanoid } from 'nanoid'
 import { Filter } from '../../components/Filter/Filter'
 import {
   MockFilterOptions,
@@ -21,7 +20,7 @@ const SearchPage = () => {
   const [cardStyle, SetCardStyle] = useState('flex')
   const { searchquery } = useParams()
   const searchQueryClass =
-	searchquery.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
+  searchquery.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
   console.log(searchquery)
 
   function switchLayer (type) {
@@ -72,13 +71,13 @@ const SearchPage = () => {
             <ul className='search-list'>
               <PersonCard style={cardStyle} />
               <PersonCard style={cardStyle} />
-              {/* {/* <PersonCard style={cardStyle} /> */}
-              {/* <PersonCard style={cardStyle} />
-							<PersonCard style={cardStyle} />
-							<PersonCard style={cardStyle} />
-							<PersonCard style={cardStyle} />
-							<PersonCard style={cardStyle} />
-							<PersonCard style={cardStyle} />  */}
+              <PersonCard style={cardStyle} />
+              <PersonCard style={cardStyle} />
+              <PersonCard style={cardStyle} />
+              <PersonCard style={cardStyle} />
+              <PersonCard style={cardStyle} />
+              <PersonCard style={cardStyle} />
+              <PersonCard style={cardStyle} />
             </ul>
           </div>
         </div>

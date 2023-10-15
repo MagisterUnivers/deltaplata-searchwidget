@@ -1,5 +1,7 @@
+import NotFound from '../../components/NotFound/NotFound'
+
 const SavedResultsPage = ({ search }) => {
-  return <div>Hiefiejfwrjf</div>
+  return <div><NotFound /></div>
 }
 
 export default SavedResultsPage

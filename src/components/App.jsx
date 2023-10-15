@@ -11,6 +11,7 @@ import { Layout } from '../components/Layout/Layout'
 import WelcomePage from '../pages/WelcomePage/WelcomePage'
 import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage'
 import SearchPage from '../pages/SearchPage/SearchPage'
+import SavedResultsPage from '../pages/SavedResultsPage/SavedResultsPage'
 import '../index.css'
 
 export const App = () => {
@@ -46,6 +47,14 @@ export const App = () => {
               <PublicRoute>
                 <SearchHistoryPage />
               </PublicRoute>
+						}
+          />
+          <Route
+            path='saved-results'
+            element={
+              <PublicRoute>
+                 <SavedResultsPage />
+               </PublicRoute>
 						}
           />
           <Route path='search/:searchquery' element={<SearchPage />} />

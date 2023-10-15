@@ -1,11 +1,31 @@
 import { ReactComponent as Trash } from '../../assets/svg/trash.svg'
+import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right-rendered.svg'
 import './Button.style.scss'
 
-export const Button = ({ text }) => {
+export const Button = ({ text, ariaLabel, className, type }) => {
+  let buttonContents
+
+  switch (type) {
+    case 'trash':
+      buttonContents = (
+        <>
+          <Trash width={16} height={16} />
+          {text}
+        </>
+      )
+      break
+    case 'advancedSearch':
+      buttonContents = (
+        <>{text} <ArrowRight width={16} height={16} /></>
+      )
+      break
+    default:
+      buttonContents = text
+  }
+
   return (
-    <button type='button' aria-label='button for cleaning' className='btn'>
-      <Trash width={16} height={16} />
-      {text}
+    <button type='button' aria-label={ariaLabel} className={className}>
+      {buttonContents}
     </button>
   )
 }

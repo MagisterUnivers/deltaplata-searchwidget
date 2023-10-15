@@ -18,7 +18,7 @@ export const SearchHistoryPage = () => {
         <div className='hero-title__container push-content'>
           <Title text='History' />
           <DateFilter />
-          <Button text='Clear all history' />
+          <Button text='Clear all history' ariaLabel='button for cleaning bookmarks' className='btn' type='trash' />
         </div>
         <div className='horizontal-line push-content' />
         <div className='table-flex'>
@@ -29,7 +29,7 @@ export const SearchHistoryPage = () => {
                 <tr>
                   {tableCellsName?.map((category) => {
 									  return <th key={category}>{category}</th>
-                })}
+                  })}
                 </tr>
               </thead>
               <tbody>
@@ -62,7 +62,7 @@ export const SearchHistoryPage = () => {
                 <tr>
                   {tableCellsName?.map((category) => {
 									  return <th key={category}>{category}</th>
-                })}
+                  })}
                 </tr>
               </thead>
               <tbody>

@@ -48,4 +48,9 @@
 
 .title-wrapper__layer-switch {
 	cursor: pointer;
+	transition: transform 0.5s ease;
+
+	&:hover {
+		transform: scale(1.3);
+	}
 }

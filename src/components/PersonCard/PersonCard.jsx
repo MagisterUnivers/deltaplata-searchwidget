@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Notify } from 'notiflix';
 import { mockSearchHistory } from '../../constants/mockData';
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg';
@@ -8,7 +9,6 @@ import { ReactComponent as MapSVG } from '../../assets/svg/map-pin-new.svg';
 import britainFlag from '../../assets/image/britain_flag.png';
 import '../Filter/Filter.style.scss';
 import './PersonCard.style.scss';
-import { useEffect } from 'react';
 
 const PersonCard = ({ style }) => {
 	useEffect(() => {

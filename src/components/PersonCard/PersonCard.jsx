@@ -24,48 +24,50 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 					</div>
 				</div>
 			</div>
-			<div className="search-list__item-body">
-				<div className="search-item__name-wrapper">
-					<p className="search-item__name-subtext filter-subtext">Person</p>
-					<h2 className="search-item__name-title">Nora Frey Draeger</h2>
-				</div>
-				<ul className="search-item__tags-list">
-					{mockSearchHistory.map((item) => {
-						if (item.name === 'Nora Frey Draeger') {
-							const tags = item.tags;
+			<div className="search-list__grid-container">
+				<div className="search-list__item-body">
+					<div className="search-item__name-wrapper no-margin">
+						<p className="search-item__name-subtext filter-subtext">Person</p>
+						<h2 className="search-item__name-title">Nora Frey Draeger</h2>
+					</div>
+					<ul className="search-item__tags-list">
+						{mockSearchHistory.map((item) => {
+							if (item.name === 'Nora Frey Draeger') {
+								const tags = item.tags;
 
-							if (tags.length > 4) {
-								const remainingTags = tags.slice(4);
-								return (
-									<>
-										{tags.slice(0, 4).map((tag, tagIndex) => (
-											<li className="search-item__tags-item" key={tagIndex}>
+								if (tags.length > 4) {
+									const remainingTags = tags.slice(4);
+									return (
+										<>
+											{tags.slice(0, 4).map((tag, tagIndex) => (
+												<li className="search-item__tags-item" key={tagIndex}>
+													<p className="search-item__tag search-item__name-subtext filter-subtext">
+														{tag}
+													</p>
+												</li>
+											))}
+											<li className="search-item__tags-item search-item__tags-item__more">
 												<p className="search-item__tag search-item__name-subtext filter-subtext">
-													{tag}
+													+{remainingTags.length} More
 												</p>
 											</li>
-										))}
-										<li className="search-item__tags-item search-item__tags-item__more">
+										</>
+									);
+								} else {
+									return tags.map((tag, tagIndex) => (
+										<li className="search-item__tags-item" key={tagIndex}>
 											<p className="search-item__tag search-item__name-subtext filter-subtext">
-												+{remainingTags.length} More
+												{tag}
 											</p>
 										</li>
-									</>
-								);
-							} else {
-								return tags.map((tag, tagIndex) => (
-									<li className="search-item__tags-item" key={tagIndex}>
-										<p className="search-item__tag search-item__name-subtext filter-subtext">
-											{tag}
-										</p>
-									</li>
-								));
+									));
+								}
 							}
-						}
-						return null;
-					})}
-				</ul>
-				<div className="search-item__user-info__wrapper">
+							return null;
+						})}
+					</ul>
+				</div>
+				<div className="search-item__user-info__wrapper no-margin">
 					{mockSearchHistory.map((item, index) => {
 						const { nationality, birthdate, address } = item;
 
@@ -97,20 +99,20 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 						return null;
 					})}
 				</div>
-			</div>
-			<div className="search-list__item-footer">
-				<button
-					type="button"
-					aria-label="button to get details about user"
-					className="search-list__item-button filter-subtext"
-				>
-					Details{' '}
-					<ArrowRightSVG
-						width={16}
-						height={16}
-						className="search-item__icons"
-					/>
-				</button>
+				<div className="search-list__item-footer button-width">
+					<button
+						type="button"
+						aria-label="button to get details about user"
+						className="search-list__item-button filter-subtext "
+					>
+						Details{' '}
+						<ArrowRightSVG
+							width={16}
+							height={16}
+							className="search-item__icons"
+						/>
+					</button>
+				</div>
 			</div>
 		</li>
 	);

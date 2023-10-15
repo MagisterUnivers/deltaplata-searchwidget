@@ -232,3 +232,26 @@
 	/* Hover Shadow */
 	box-shadow: 10px 10px 30px 0px rgba(13, 11, 30, 0.1);
 }
+
+.search-list__grid-container {
+	display: flex;
+	align-items: center;
+}
+
+.search-list__item-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 8px;
+
+	width: 70%; // 12 - 5 | 1/5
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.button-width {
+	display: flex;
+	width: 7.5%;
+}

@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix';
 import { mockSearchHistory } from '../../constants/mockData';
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg';
@@ -11,50 +12,11 @@ import '../Filter/Filter.style.scss';
 import './PersonCard.style.scss';
 
 const PersonCard = ({ style }) => {
-	useEffect(() => {
-		if (style === 'flex') {
-			const mainContainer = document.querySelector('#mainlayerwrapper');
-			const bodyContainer = document.querySelector('#grid');
-			const itemBodyWrapper = document.querySelector('#itembody');
-			const userInfoWrapper = document.querySelector('#userinfo');
-			const buttonWrapper = document.querySelector('#button-width');
-
-			//
-			mainContainer.classList.remove('main-wrapper');
-			mainContainer.classList.add('search-list__item');
-
-			//
-			bodyContainer.classList.remove('search-list__grid-container');
-			itemBodyWrapper.classList.remove('search-list__item-body');
-
-			//
-			userInfoWrapper.classList.remove('no-margin');
-
-			//
-			buttonWrapper.classList.remove('button-width');
-		}
-
-		if (style === 'grid') {
-			const mainContainer = document.querySelector('#mainlayerwrapper');
-			const bodyContainer = document.querySelector('#grid');
-			const itemBodyWrapper = document.querySelector('#itembody');
-			const userInfoWrapper = document.querySelector('#userinfo');
-			const buttonWrapper = document.querySelector('#button-width');
-			// main wrapper
-			mainContainer.classList.remove('search-list__item');
-			mainContainer.classList.add('main-wrapper');
-
-			// name and tags wrapper
-			bodyContainer.classList.add('search-list__grid-container');
-			itemBodyWrapper.classList.add('search-list__item-body');
-
-			// user information wrapper
-			userInfoWrapper.classList.add('no-margin');
-
-			// button styles
-			buttonWrapper.classList.add('button-width');
-		}
-	}, [style]);
+	const [uniqueId1, setUniqueId1] = useState(nanoid());
+	const [uniqueId2, setUniqueId2] = useState(nanoid());
+	const [uniqueId3, setUniqueId3] = useState(nanoid());
+	const [uniqueId4, setUniqueId4] = useState(nanoid());
+	const [uniqueId5, setUniqueId5] = useState(nanoid());
 
 	function handleShareClick() {
 		const randomText = 'https://www.demowidget.com/search/somelement1/';
@@ -69,7 +31,10 @@ const PersonCard = ({ style }) => {
 	}
 
 	return (
-		<li className="search-list__item" id="mainlayerwrapper">
+		<li
+			className={style === 'flex' ? 'search-list__item' : 'main-wrapper'}
+			id={uniqueId1}
+		>
 			<div className="search-list__item-header">
 				<div className="search-list__item-subtitle-wrapper">
 					<p className="search-list__item-subtitle">30 May, 2023</p>
@@ -93,8 +58,14 @@ const PersonCard = ({ style }) => {
 					</div>
 				</div>
 			</div>
-			<div className="" id="grid">
-				<div className="" id="itembody">
+			<div
+				className={style === 'flex' ? '' : 'search-list__grid-container'}
+				id={uniqueId2}
+			>
+				<div
+					className={style === 'flex' ? '' : 'search-list__item-body'}
+					id={uniqueId3}
+				>
 					<div className="search-item__name-wrapper">
 						<p className="search-item__name-subtext filter-subtext">Person</p>
 						<h2 className="search-item__name-title">Nora Frey Draeger</h2>
@@ -136,7 +107,14 @@ const PersonCard = ({ style }) => {
 						})}
 					</ul>
 				</div>
-				<div className="search-item__user-info__wrapper" id="userinfo">
+				<div
+					className={
+						style === 'flex'
+							? 'search-item__user-info__wrapper'
+							: 'search-item__user-info__wrapper no-margin'
+					}
+					id={uniqueId4}
+				>
 					{mockSearchHistory.map((item, index) => {
 						const { nationality, birthdate, address } = item;
 
@@ -168,7 +146,14 @@ const PersonCard = ({ style }) => {
 						return null;
 					})}
 				</div>
-				<div className="search-list__item-footer" id="button-width">
+				<div
+					className={
+						style === 'flex'
+							? 'search-list__item-footer'
+							: 'search-list__item-footer button-width'
+					}
+					id={uniqueId5}
+				>
 					<button
 						type="button"
 						aria-label="button to get details about user"

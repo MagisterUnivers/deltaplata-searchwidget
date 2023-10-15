@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { nanoid } from 'nanoid';
 import { Filter } from '../../components/Filter/Filter';
 import {
 	MockFilterOptions,
@@ -70,14 +71,14 @@ const SearchPage = () => {
 					<div className="search-list__wrapper">
 						<ul className="search-list">
 							<PersonCard style={cardStyle} />
-							{/* <PersonCard />
-							<PersonCard />
-							<PersonCard />
-							<PersonCard />
-							<PersonCard />
-							<PersonCard />
-							<PersonCard />
-							<PersonCard /> */}
+							<PersonCard style={cardStyle} />
+							{/* {/* <PersonCard style={cardStyle} /> */}
+							{/* <PersonCard style={cardStyle} />
+							<PersonCard style={cardStyle} />
+							<PersonCard style={cardStyle} />
+							<PersonCard style={cardStyle} />
+							<PersonCard style={cardStyle} />
+							<PersonCard style={cardStyle} />  */}
 						</ul>
 					</div>
 				</div>

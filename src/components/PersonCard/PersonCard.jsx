@@ -10,7 +10,7 @@ import './PersonCard.style.scss';
 
 const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 	return (
-		<li className="search-list__item">
+		<li className="main-wrapper">
 			<div className="search-list__item-header">
 				<div className="search-list__item-subtitle-wrapper">
 					<p className="search-list__item-subtitle">30 May, 2023</p>

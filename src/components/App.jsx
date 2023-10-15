@@ -1,57 +1,57 @@
 import {
-	Route,
-	Routes,
-	Navigate,
-	useNavigate
-	// useLocation
-} from 'react-router';
+  Route,
+  Routes,
+  Navigate,
+  useNavigate
+  // useLocation
+} from 'react-router'
 // import { useEffect } from 'react';
-import { PublicRoute } from '../components/routes/PublicRoute';
-import { Layout } from '../components/Layout/Layout';
-import WelcomePage from '../pages/WelcomePage/WelcomePage';
-import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage';
-import SearchPage from '../pages/SearchPage/SearchPage';
-import '../index.css';
+import { PublicRoute } from '../components/routes/PublicRoute'
+import { Layout } from '../components/Layout/Layout'
+import WelcomePage from '../pages/WelcomePage/WelcomePage'
+import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage'
+import SearchPage from '../pages/SearchPage/SearchPage'
+import '../index.css'
 
 export const App = () => {
-	const navigate = useNavigate();
-	// const location = useLocation();
+  const navigate = useNavigate()
+  // const location = useLocation();
 
-	// useEffect(() => {
-	// 	if (
-	// 		location.pathname !== '/home' &&
-	// 		location.pathname !== '/history' &&
-	// 		location.pathname !== '/search/:searchquery'
-	// 	) {
-	// 		navigate('/home');
-	// 	}
-	// }, [navigate, location]);
+  // useEffect(() => {
+  // 	if (
+  // 		location.pathname !== '/home' &&
+  // 		location.pathname !== '/history' &&
+  // 		location.pathname !== '/search/:searchquery'
+  // 	) {
+  // 		navigate('/home');
+  // 	}
+  // }, [navigate, location]);
 
-	return (
-		<>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route
-						path="home"
-						index
-						element={
-							<PublicRoute>
-								<WelcomePage />
-							</PublicRoute>
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route
+            path='home'
+            index
+            element={
+              <PublicRoute>
+                <WelcomePage />
+              </PublicRoute>
 						}
-					/>
-					<Route
-						path="history"
-						element={
-							<PublicRoute>
-								<SearchHistoryPage />
-							</PublicRoute>
+          />
+          <Route
+            path='history'
+            element={
+              <PublicRoute>
+                <SearchHistoryPage />
+              </PublicRoute>
 						}
-					/>
-					<Route path="search/:searchquery" element={<SearchPage />} />
-				</Route>
-				<Route path="*" element={<Navigate to="/home" />} />
-			</Routes>
-		</>
-	);
-};
+          />
+          <Route path='search/:searchquery' element={<SearchPage />} />
+        </Route>
+        <Route path='*' element={<Navigate to='/home' />} />
+      </Routes>
+    </>
+  )
+}

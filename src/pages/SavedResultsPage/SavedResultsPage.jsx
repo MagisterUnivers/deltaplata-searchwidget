@@ -1,5 +1,5 @@
 const SavedResultsPage = ({ search }) => {
-	return <div>Hiefiejfwrjf</div>;
-};
+  return <div>Hiefiejfwrjf</div>
+}
 
-export default SavedResultsPage;
+export default SavedResultsPage

@@ -17,10 +17,10 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 				</div>
 				<div className="search-item__icons">
 					<div className="search-item__icons-wrapper">
-						<ShareSVG width={16} height={16} />
+						<ShareSVG width={16} height={16} className="search-item__icon" />
 					</div>
 					<div className="search-item__icons-wrapper">
-						<BookmarkSVG width={16} height={16} />
+						<BookmarkSVG width={16} height={16} className="search-item__icon" />
 					</div>
 				</div>
 			</div>

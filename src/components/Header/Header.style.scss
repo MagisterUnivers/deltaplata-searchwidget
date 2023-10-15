@@ -47,8 +47,19 @@
 	align-items: center;
 	gap: 8px;
 
+	transition:
+		background-color 0.5s ease-out,
+		fill 0.5s ease-out,
+		color 0.5s ease-out;
+
 	border-radius: 50px;
 	border: 1px solid var(--main-border-color);
+
+	&:hover {
+		background-color: var(--main-darkBG-color);
+		color: var(--main-white-color);
+		fill: var(--main-white-color);
+	}
 }
 
 .header-bg {

@@ -9,11 +9,6 @@ import '../Filter/Filter.style.scss';
 import './PersonCard.style.scss';
 
 const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
-	// const tagsAmount = mockSearchHistory
-	// 	.filter((item) => item.name === name)
-	// 	.map((item) => item.tags)
-	// 	.flat().length;
-
 	return (
 		<li className="search-list__item">
 			<div className="search-list__item-header">

@@ -2,38 +2,35 @@ import {
 	Route,
 	Routes,
 	Navigate,
-	useNavigate,
-	useLocation
+	useNavigate
+	// useLocation
 } from 'react-router';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { PublicRoute } from '../components/routes/PublicRoute';
 import { Layout } from '../components/Layout/Layout';
 import WelcomePage from '../pages/WelcomePage/WelcomePage';
 import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage';
+import SearchPage from '../pages/SearchPage/SearchPage';
 import '../index.css';
 
 export const App = () => {
 	const navigate = useNavigate();
-	const location = useLocation();
+	// const location = useLocation();
 
-	useEffect(() => {
-		if (location.pathname !== '/home' && location.pathname !== '/history') {
-			navigate('/home');
-		}
-	}, [navigate, location]);
+	// useEffect(() => {
+	// 	if (
+	// 		location.pathname !== '/home' &&
+	// 		location.pathname !== '/history' &&
+	// 		location.pathname !== '/search/:searchquery'
+	// 	) {
+	// 		navigate('/home');
+	// 	}
+	// }, [navigate, location]);
 
 	return (
 		<>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route
-						path="history"
-						element={
-							<PublicRoute>
-								<SearchHistoryPage />
-							</PublicRoute>
-						}
-					/>
 					<Route
 						path="home"
 						index
@@ -43,6 +40,15 @@ export const App = () => {
 							</PublicRoute>
 						}
 					/>
+					<Route
+						path="history"
+						element={
+							<PublicRoute>
+								<SearchHistoryPage />
+							</PublicRoute>
+						}
+					/>
+					<Route path="search/:searchquery" element={<SearchPage />} />
 				</Route>
 				<Route path="*" element={<Navigate to="/home" />} />
 			</Routes>

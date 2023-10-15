@@ -1,13 +1,13 @@
-import { Select } from '../Select/Select';
-import './Filter.style.scss';
+import { Select } from '../Select/Select'
+import './Filter.style.scss'
 
 export const Filter = ({ type, data }) => {
-	return (
-		<div className="filter-container">
-			<p className="filter-subtext">
-				{type === 'filter' ? 'Filter by' : 'Sort by'}
-			</p>
-			{/* <select className="filter-select__menu">
+  return (
+    <div className='filter-container'>
+      <p className='filter-subtext'>
+        {type === 'filter' ? 'Filter by' : 'Sort by'}
+      </p>
+      {/* <select className="filter-select__menu">
 				<option value="default">
 					{(() => {
 						switch (type) {
@@ -30,7 +30,7 @@ export const Filter = ({ type, data }) => {
 					);
 				})}
 			</select> */}
-			<Select type={type} data={data} />
-		</div>
-	);
-};
+      <Select type={type} data={data} />
+    </div>
+  )
+}

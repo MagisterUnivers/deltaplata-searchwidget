@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const SearchHistoryTable = () => {
-  return <div>SearchHistoryTable</div>;
-};
+  return <div>SearchHistoryTable</div>
+}
 
-export default SearchHistoryTable;
+export default SearchHistoryTable

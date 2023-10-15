@@ -1,3 +1,3 @@
 export const CountryFilter = () => {
-	return <div>CountryFilter</div>;
-};
+  return <div>CountryFilter</div>
+}

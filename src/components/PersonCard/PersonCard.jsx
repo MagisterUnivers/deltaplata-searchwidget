@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const PersonCard = () => {
-  return <div>PersonCard</div>;
-};
+  return <div>PersonCard</div>
+}
 
-export default PersonCard;
+export default PersonCard

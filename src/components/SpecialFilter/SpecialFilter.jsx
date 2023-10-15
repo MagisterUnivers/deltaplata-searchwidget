@@ -1,87 +1,87 @@
-import { useState } from 'react';
-import { Select } from '../Select/Select';
+import { useState } from 'react'
+import { Select } from '../Select/Select'
 import {
-	mockCountryFilter,
-	mockSpecialFilterTags
-} from '../../constants/mockData';
-import { ReactComponent as Close } from '../../assets/svg/close.svg';
-import './SpecialFilter.style.scss';
+  mockCountryFilter,
+  mockSpecialFilterTags
+} from '../../constants/mockData'
+import { ReactComponent as Close } from '../../assets/svg/close.svg'
+import './SpecialFilter.style.scss'
 
 export const SpecialFilter = () => {
-	const [checkedItems, setCheckedItems] = useState({});
+  const [checkedItems, setCheckedItems] = useState({})
 
-	const handleCheckboxChange = (e) => {
-		const { id, checked } = e.target;
+  const handleCheckboxChange = (e) => {
+    const { id, checked } = e.target
 
-		setCheckedItems({
-			...checkedItems,
-			[id]: checked
-		});
-	};
+    setCheckedItems({
+      ...checkedItems,
+      [id]: checked
+    })
+  }
 
-	// Число включенных чекбоксов
-	const numberOfChecked = Object.values(checkedItems).filter(
-		(isChecked) => isChecked
-	).length;
+  // Число включенных чекбоксов
+  const numberOfChecked = Object.values(checkedItems).filter(
+    (isChecked) => isChecked
+  ).length
 
-	const resetCheckboxes = () => {
-		const checkboxes = document.querySelectorAll(
-			'.special-filter__checkbox-item'
-		);
-		//  Выбрал все чекбоксы (айтемы)
+  const resetCheckboxes = () => {
+    const checkboxes = document.querySelectorAll(
+      '.special-filter__checkbox-item'
+    )
+    //  Выбрал все чекбоксы (айтемы)
 
-		// Прошелся по всем, и повыключал им галочки
-		checkboxes.forEach((checkbox) => {
-			checkbox.checked = false;
-		});
-	};
+    // Прошелся по всем, и повыключал им галочки
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false
+    })
+  }
 
-	const handleRemoveAllFilter = () => {
-		setCheckedItems({});
-		resetCheckboxes();
-	};
+  const handleRemoveAllFilter = () => {
+    setCheckedItems({})
+    resetCheckboxes()
+  }
 
-	return (
-		<div className="special-filter__container">
-			<div className="special-filter__title-container">
-				<h3 className="special-filter__title">Special Filter</h3>
-				<p className="special-filter__title-amount">{numberOfChecked}</p>
-			</div>
-			<div className="special-filter__checkbox-wrapper">
-				<ul className="special-filter__list">
-					{mockSpecialFilterTags.map((e) => {
-						const id = `checkbox-${e}`;
-						return (
-							<li className="special-filter__item" key={e}>
-								<input
-									className="special-filter__checkbox-item"
-									type="checkbox"
-									id={id}
-									defaultChecked={false}
+  return (
+    <div className='special-filter__container'>
+      <div className='special-filter__title-container'>
+        <h3 className='special-filter__title'>Special Filter</h3>
+        <p className='special-filter__title-amount'>{numberOfChecked}</p>
+      </div>
+      <div className='special-filter__checkbox-wrapper'>
+        <ul className='special-filter__list'>
+          {mockSpecialFilterTags.map((e) => {
+					  const id = `checkbox-${e}`
+            return (
+              <li className='special-filter__item' key={e}>
+                <input
+                  className='special-filter__checkbox-item'
+                  type='checkbox'
+                  id={id}
+                  defaultChecked={false}
 									// checked={checkedItems[id]}
-									onChange={(event) => {
-										handleCheckboxChange(event);
-									}}
-								/>
-								<p className="special-filter__checkbox-subtext">{e}</p>
-							</li>
-						);
-					})}
-				</ul>
-			</div>
-			{/* <div className="special-filter__scrollbar"></div> */}
-			<button
-				type="button"
-				className="special-filter__button"
-				onClick={() => handleRemoveAllFilter()}
-			>
-				<Close width={16} height={16} />
-				Remove all filter
-			</button>
-			<div className="special-filter__country-filter">
-				<h3 className="country-filter__title">Country Filter</h3>
-				<Select type="country" data={mockCountryFilter} />
-			</div>
-		</div>
-	);
-};
+                  onChange={(event) => {
+									  handleCheckboxChange(event)
+                  }}
+                />
+                <p className='special-filter__checkbox-subtext'>{e}</p>
+              </li>
+					  )
+          })}
+        </ul>
+      </div>
+      {/* <div className="special-filter__scrollbar"></div> */}
+      <button
+        type='button'
+        className='special-filter__button'
+        onClick={() => handleRemoveAllFilter()}
+      >
+        <Close width={16} height={16} />
+        Remove all filter
+      </button>
+      <div className='special-filter__country-filter'>
+        <h3 className='country-filter__title'>Country Filter</h3>
+        <Select type='country' data={mockCountryFilter} />
+      </div>
+    </div>
+  )
+}

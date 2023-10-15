@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import robothiImage from '../../assets/image/robothi.png';
 import robothi2xImage from '../../assets/image/robothi@2x.png';
 import './Hero.style.scss';
 
 export const Hero = () => {
+	const [searchParams, setSearchParams] = useSearchParams();
+	const navigate = useNavigate();
 	const [inputData, setInputData] = useState({
 		search: ''
 	});
@@ -11,11 +14,13 @@ export const Hero = () => {
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setInputData({ ...inputData, [name]: value });
+		setSearchParams({ name: e.target.value });
+		console.log(searchParams.get('name')); // 'examplestring'
 	};
 
-	// const handleSend = () => {
-	// 	// navigate to
-	// };
+	const handleSend = () => {
+		navigate(`/search/${inputData.search}`);
+	};
 
 	return (
 		<div className="hero-container">
@@ -49,7 +54,13 @@ export const Hero = () => {
 						onChange={handleChange}
 					/>
 				</div>
-				<button type="button" className="button-primary">
+				<button
+					type="submit"
+					className="button-primary"
+					onClick={() => {
+						handleSend();
+					}}
+				>
 					Search
 				</button>
 			</div>

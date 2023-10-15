@@ -1,0 +1,35 @@
+.title-wrapper__results-title {
+	font-size: 31px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: calc(40.3 / 31);
+
+	color: var(--main-heading-color);
+}
+
+.title-wrapper__searchquery {
+	font-size: 31px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: calc(40.3 / 31);
+
+	color: var(--main-heading-color);
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 150px;
+
+	&:before,
+	&:after {
+		content: '\201C';
+	}
+
+	&:after {
+		content: '\201D';
+	}
+}
+
+.quoted-text {
+	quotes: '\201C' '\201D';
+}

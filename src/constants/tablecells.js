@@ -1,7 +1,7 @@
 export const tableCellsName = [
-	'Keyword',
-	'Type',
-	'Number of Results',
-	'Time',
-	'Link'
-];
+  'Keyword',
+  'Type',
+  'Number of Results',
+  'Time',
+  'Link'
+]

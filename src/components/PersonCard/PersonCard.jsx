@@ -47,7 +47,7 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 										))}
 										<li
 											className="search-item__tags-item search-item__tags-item__more"
-											key="more"
+											key={remainingTags}
 										>
 											<p className="search-item__tag search-item__name-subtext filter-subtext">
 												+{remainingTags.length} More
@@ -69,13 +69,13 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 					})}
 				</ul>
 				<div className="search-item__user-info__wrapper">
-					{mockSearchHistory.map((item) => {
+					{mockSearchHistory.map((item, index) => {
 						const { nationality, birthdate, address } = item;
 
 						if (item.name === 'Nora Frey Draeger') {
 							return (
 								<>
-									<div className="search-item__flex">
+									<div className="search-item__flex" key={nationality}>
 										<img
 											src={
 												nationality === 'British' ? britainFlag : 'default flag'
@@ -86,17 +86,18 @@ const PersonCard = ({ name, tag, nationality, birthdate, adrress }) => {
 										/>
 										<p className="filter-subtext">{nationality}</p>
 									</div>
-									<div className="search-item__flex">
+									<div className="search-item__flex" key={birthdate}>
 										<CalendarSVG width={16} height={16} />
 										<p className="filter-subtext">{birthdate}</p>
 									</div>
-									<div className="search-item__flex">
+									<div className="search-item__flex" key={address}>
 										<MapSVG width={16} height={16} />
 										<p className="filter-subtext">{address}</p>
 									</div>
 								</>
 							);
 						}
+						return null;
 					})}
 				</div>
 			</div>

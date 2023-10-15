@@ -6,8 +6,6 @@
 	align-items: flex-start;
 	gap: 8px;
 
-	cursor: pointer;
-
 	border-radius: 8px;
 	border: 1px solid var(--main-border-color);
 }
@@ -52,6 +50,12 @@
 	gap: 8px;
 	align-self: stretch;
 
+	cursor: pointer;
+
 	border-radius: 8px;
 	background: var(--main-whiteBG-color);
+}
+
+.bulk-header__hint {
+	cursor: pointer;
 }

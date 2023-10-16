@@ -25,20 +25,20 @@ export const SearchHistoryPage = () => {
           <div className='table'>
             <h2 className='table-date'>25 July, 2023</h2>
             <table className='table-base'>
-              <thead>
+              <thead className='table-head'>
                 <tr>
                   {tableCellsName?.map((category) => {
 									  return <th key={category}>{category}</th>
                   })}
                 </tr>
               </thead>
-              <tbody>
+              <tbody className='table-body'>
                 {mockSearchHistory
 								  .filter((item) => item.date === '2023-07-25')
 								  .map((item) => (
   <tr key={item.number}>
-    <td className='table-subtext underline'>
-      <Link to='/home'>{item.name}</Link>
+    <td>
+      <Link to='/home' className='table-subtext underline'>{item.name}</Link>
     </td>
     <td className='table-subtext'>{item.type}</td>
     <td className='table-subtext'>{item.number}</td>
@@ -55,23 +55,26 @@ export const SearchHistoryPage = () => {
               </tbody>
             </table>
           </div>
+
+          {/* Second table */}
+
           <div className='table'>
             <h2 className='table-date'>24 July, 2023</h2>
             <table className='table-base'>
-              <thead>
+              <thead className='table-head'>
                 <tr>
                   {tableCellsName?.map((category) => {
 									  return <th key={category}>{category}</th>
                   })}
                 </tr>
               </thead>
-              <tbody>
+              <tbody className='table-body'>
                 {mockSearchHistory
 								  .filter((item) => item.date === '2023-07-24')
 								  .map((item) => (
   <tr key={item.number}>
-    <td className='table-subtext underline'>
-      <Link to='/home'>{item.name}</Link>
+    <td>
+      <Link to='/home' className='table-subtext underline'>{item.name}</Link>
     </td>
     <td className='table-subtext'>{item.type}</td>
     <td className='table-subtext'>{item.number}</td>

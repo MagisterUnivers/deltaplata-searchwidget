@@ -40,7 +40,7 @@ export function SpecialFilter () {
     <div className='special-filter__container'>
       <div className='special-filter__title-container'>
         <h3 className='special-filter__title'>Special Filter</h3>
-        <p className='special-filter__title-amount'>{numberOfChecked}</p>
+        <span className='special-filter__title-amount__border'><p className='special-filter__title-amount'>{numberOfChecked}</p></span>
       </div>
       <div className='special-filter__checkbox-wrapper'>
         <ul className='special-filter__list'>

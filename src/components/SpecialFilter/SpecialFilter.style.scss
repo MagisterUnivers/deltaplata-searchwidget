@@ -136,3 +136,16 @@ cursor: pointer;
 	flex-direction: column;
 	gap: 8px;
 }
+
+.special-filter__title-amount__border {
+	display: flex;
+width: 33px;
+height: 23px;
+padding: 4px 8px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+
+border-radius: 50px;
+border: 1px solid var(--main-border-color);
+}

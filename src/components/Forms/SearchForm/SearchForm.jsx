@@ -31,7 +31,7 @@ export function SearchForm ({ location }) {
           }}
         >
           <div className='hero-searchbar__wrapper'>
-            <div className='hero-search'>
+            <label className='hero-search'>
               <input
                 type='text'
                 name='search'
@@ -40,7 +40,7 @@ export function SearchForm ({ location }) {
                 value={inputData.search}
                 onChange={handleChange}
               />
-            </div>
+            </label>
             <button type='submit' className='button-primary'>
               Search
             </button>

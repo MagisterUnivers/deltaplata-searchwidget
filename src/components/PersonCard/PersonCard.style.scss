@@ -52,6 +52,8 @@
 .search-item__icons {
 	display: flex;
 	gap: 8px;
+	
+	transition: fill 150ms ease-out;
 }
 
 /**
@@ -119,8 +121,7 @@
 
 	transition:
 		color 150ms ease-out,
-		background-color 150ms ease-out,
-		fill 150ms ease-out;
+		background-color 150ms ease-out;
 
 	color: var(--main-heading-color);
 	border: 1px solid var(--main-darkBG-color);
@@ -145,11 +146,10 @@
 	align-items: center;
 
 	border-radius: 1000px;
-	background: var(--main-white-color);
+	background-color: var(--main-white-color);
 
 	transition:
-		color 0.5s ease-out,
-		fill 0.5s ease-out;
+		background-color 150ms ease-out;
 
 	&:hover {
 		background-color: var(--main-heading-color);
@@ -169,13 +169,12 @@
 	align-items: center;
 
 	border-radius: 1000px;
-	background: var(--main-heading-color);
+	background-color: var(--main-heading-color);
 	fill: var(--main-white-color);
 
 
 	transition:
-		color 150ms ease-out,
-		fill 150ms ease-out;
+		background-color 150ms ease-out;
 
 	&:hover {
 		background-color: var(--main-white-color);

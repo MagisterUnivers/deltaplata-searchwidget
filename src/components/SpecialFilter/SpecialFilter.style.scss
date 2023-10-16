@@ -71,8 +71,7 @@
 	line-height: 100%;
 
 	transition: background-color 150ms ease-out,
-	color 150ms ease-out,
-	fill 150ms ease-out;
+	color 150ms ease-out;
 	
 	color: var(--main-mute-color);
 	border-radius: 50px;
@@ -89,6 +88,7 @@
 }
 
 .special-filter__icon {
+	transition: fill 150ms ease-out;
 	fill: var(--main-mute-color);
 }
 

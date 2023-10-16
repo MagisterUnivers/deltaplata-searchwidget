@@ -33,16 +33,14 @@
 	padding: 4px;
 	align-items: center;
 
-cursor: pointer;
-transition: background-color 0.5s ease-out,
-color 0.5s ease-out,
-fill 0.5s ease-out;
+  cursor: pointer;
+  transition: background-color 150ms ease-out;
 
 	border-radius: 4px;
 	background-color: var(--main-whiteBG-color);
 
 	&:hover {
-background-color: var(--main-darkBG-color);
+    background-color: var(--main-darkBG-color);
 
 		.recentsearch-list__icon,
 		.recentsearch-subtitle
@@ -54,6 +52,7 @@ background-color: var(--main-darkBG-color);
 }
 
 .recentsearch-list__icon {
+	transition: fill 150ms ease-out;
 	fill: var(--main-mute-color);
 }
 
@@ -63,5 +62,6 @@ background-color: var(--main-darkBG-color);
 	font-weight: 400;
 	line-height: calc(21 / 14);
 
+	transition: color 150ms ease-out;
 	color: var(--main-mute-color);
 }

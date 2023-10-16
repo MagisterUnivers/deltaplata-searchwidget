@@ -41,27 +41,6 @@
 	color: var(--main-white-color);
 }
 
-.navbar-search__button {
-	display: flex;
-	padding: 8px 12px;
-	align-items: center;
-	gap: 8px;
-
-	transition:
-		background-color 0.5s ease-out,
-		fill 0.5s ease-out,
-		color 0.5s ease-out;
-
-	border-radius: 50px;
-	border: 1px solid var(--main-border-color);
-
-	&:hover {
-		background-color: var(--main-darkBG-color);
-		color: var(--main-white-color);
-		fill: var(--main-white-color);
-	}
-}
-
 .header-bg {
 	background-color: var(--main-darkBG-color);
 }

@@ -62,12 +62,10 @@ export const SpecialFilter = () => {
 									// checked={checkedItems[id]}
                     onChange={(event) => {
 									  handleCheckboxChange(event)
-                  }}
+                    }}
                   />
                   <p
-                    className='special-filter__checkbox-subtext' onChange={(event) => {
-									  handleCheckboxChange(event)
-                  }}
+                    className='special-filter__checkbox-subtext'
                   >{e}
                   </p>
                 </label>

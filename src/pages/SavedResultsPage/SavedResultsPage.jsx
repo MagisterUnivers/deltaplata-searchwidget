@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, DateFilter, PersonCard, Title } from 'components'
 import { mockSearchHistory } from 'constants'
 import '../../components/Section/Section.style.scss'
@@ -22,8 +22,12 @@ export function SavedResultsPage ({ search }) {
         </div>
         <div className='horizontal-line push-content' />
         <div className='content-container'>
-          {mockSearchHistory.slice(0, 8).map(() => {
-            return <PersonCard isBookmarked={Boolean(true)} />
+          {mockSearchHistory.slice(0, 8).map((index) => {
+            return (
+              <React.Fragment key={index}>
+                <PersonCard isBookmarked={Boolean(true)} />
+              </React.Fragment>
+            )
           })}
         </div>
       </div>

@@ -265,6 +265,7 @@
 .search-list__grid-container {
 	display: flex;
 	align-items: center;
+	width: 100%;
 }
 
 .search-list__item-body {
@@ -282,5 +283,4 @@
 
 .button-width {
 	display: flex;
-	width: 7.5%;
 }

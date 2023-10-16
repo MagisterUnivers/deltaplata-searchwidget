@@ -9,7 +9,7 @@ import britainFlag from '../../assets/image/britain_flag.png'
 import '../Filter/Filter.style.scss'
 import './PersonCard.style.scss'
 
-const PersonCard = ({ layer, isBookmarked }) => {
+export const PersonCard = ({ layer, isBookmarked }) => {
   if (!layer) layer = 'flex'
   console.log(isBookmarked)
 
@@ -162,5 +162,3 @@ const PersonCard = ({ layer, isBookmarked }) => {
     </li>
   )
 }
-
-export default PersonCard

@@ -3,7 +3,7 @@ import robotsearch2x from '../../assets/image/robotsearch@2x.png'
 import { Button } from '../Button/Button'
 import './NotFound.style.scss'
 
-const NotFound = () => {
+export const NotFound = () => {
   return (
     <div className='not-found__container'>
       <picture>
@@ -26,5 +26,3 @@ const NotFound = () => {
     </div>
   )
 }
-
-export default NotFound

@@ -1,21 +1,10 @@
-import React, { useState } from 'react'
 import SearchForm from '../Forms/SearchForm/SearchForm'
-import { ReactComponent as SearchLoop } from '../../assets/svg/search.svg'
 import { ReactComponent as NextSvg } from '../../assets/svg/arrow-right-rendered.svg'
 import '../Container/Container.style.scss'
 import './Header.style.scss'
 
-const Header = () => {
-  const [inputData, setInputData] = useState({
-    search: ''
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setInputData({ ...inputData, [name]: value })
-  }
-
-  const handleSend = () => {
+export const Header = () => {
+  function handleSend () {
     // navigate to
   }
 
@@ -37,5 +26,3 @@ const Header = () => {
     </>
   )
 }
-
-export default Header

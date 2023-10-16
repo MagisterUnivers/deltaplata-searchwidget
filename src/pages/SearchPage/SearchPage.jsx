@@ -7,7 +7,7 @@ import {
   mockSortOptions
 } from '../../constants/mockData'
 import { Bulk } from '../../components/Bulk/Bulk'
-import PersonCard from '../../components/PersonCard/PersonCard'
+import { PersonCard } from '../../components/PersonCard/PersonCard'
 import { HashViewComponent } from '../../components/HashViewComponent/HashViewComponent'
 import { ReactComponent as GridSVG } from '../../assets/svg/grid-layer.svg'
 import { ReactComponent as FlexSVG } from '../../assets/svg/flex-layer.svg'

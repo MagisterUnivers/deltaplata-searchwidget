@@ -1,6 +1,6 @@
 import { Button } from '../../components/Button/Button'
 import { DateFilter } from '../../components/DateFilter/DateFilter'
-import PersonCard from '../../components/PersonCard/PersonCard'
+import { PersonCard } from '../../components/PersonCard/PersonCard'
 import { Title } from '../../components/Title/Title'
 import { mockSearchHistory } from '../../constants/mockData'
 import '../../components/Section/Section.style.scss'

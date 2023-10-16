@@ -38,6 +38,7 @@
 
 	&:first-of-type {
 		gap: 4px;
+		position: relative;
 	}
 }
 
@@ -75,8 +76,8 @@
 	border-radius: 4px;
   background-color: var(--main-darkBG-color);
 
-	bottom: 93px;
-	left: 185%;
+	bottom: 30px;
+	left: -70px;
 }
 
 .hint-text {
@@ -89,6 +90,7 @@
 }
 
 .hint-text__underline {
+	cursor: pointer;
 	color: var(--main-white-color);
 	text-decoration: underline;
 }

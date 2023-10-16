@@ -27,7 +27,7 @@ export function Bulk () {
           />
           {isHintVisible && (
             <div className='hint-container'>
-              <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
+              <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span onClick={() => console.log('File sended')} className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
               <Polygon width={16} height={10.82} className='hint-polygon' />
             </div>)}
         </div>

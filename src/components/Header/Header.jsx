@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SearchForm from '../Forms/SearchForm/SearchForm'
 import { ReactComponent as SearchLoop } from '../../assets/svg/search.svg'
 import { ReactComponent as NextSvg } from '../../assets/svg/arrow-right-rendered.svg'
 import '../Container/Container.style.scss'
@@ -21,19 +22,7 @@ const Header = () => {
   return (
     <>
       <nav className='container'>
-        <div className='navbar-search'>
-          <button className='search-button'>
-            <SearchLoop width={14} height={14} className='search-svg' />
-          </button>
-          <input
-            type='text'
-            name='search'
-            className='navbar-search__field'
-            placeholder='Please type your keyword'
-            value={inputData.search}
-            onChange={handleChange}
-          />
-        </div>
+        <SearchForm location='header' />
         <div className='navbar-search'>
           <h2 className='navbar-search__title'>Looking for more details?</h2>
           <button

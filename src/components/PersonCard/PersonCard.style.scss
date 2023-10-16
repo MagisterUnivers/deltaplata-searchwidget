@@ -181,6 +181,33 @@
 	}
 }
 
+.search-item__icons-wrapper__reversed {
+	display: flex;
+	width: 32px;
+	height: 32px;
+	padding: 8px;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 1000px;
+	background: var(--main-heading-color);
+	fill: var(--main-white-color);
+
+
+	transition:
+		color 0.5s ease-out,
+		fill 0.5s ease-out;
+
+	&:hover {
+		background-color: var(--main-white-color);
+
+		.search-item__icon {
+			fill: var(--main-heading-color);
+		}
+	}
+}
+
+
 .search-list__item-header {
 	//
 }

@@ -19,7 +19,7 @@ const NotFound = () => {
       <h2 className='not-found__title'>
         Opp ! I don't see any matching data
       </h2>
-      <p className='not-found__subtitle'>Sorry, the keyword you searched for did not match the data.
+      <p className='not-found__subtitle'>Sorry, the keyword you searched for did not match the data. <br />
         Don't worry, try another way.
       </p>
       <Button text='Advanced Search' type='advancedSearch' ariaLabel='button for advanced search' className='btn-search padding' />

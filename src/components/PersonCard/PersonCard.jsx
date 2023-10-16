@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { nanoid } from 'nanoid'
 import { Notify } from 'notiflix'
 import { mockSearchHistory } from '../../constants/mockData'
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg'
@@ -11,12 +9,9 @@ import britainFlag from '../../assets/image/britain_flag.png'
 import '../Filter/Filter.style.scss'
 import './PersonCard.style.scss'
 
-const PersonCard = ({ style }) => {
-  const [uniqueId1, setUniqueId1] = useState(nanoid())
-  const [uniqueId2, setUniqueId2] = useState(nanoid())
-  const [uniqueId3, setUniqueId3] = useState(nanoid())
-  const [uniqueId4, setUniqueId4] = useState(nanoid())
-  const [uniqueId5, setUniqueId5] = useState(nanoid())
+const PersonCard = ({ layer, isBookmarked }) => {
+  if (!layer) layer = 'flex'
+  console.log(isBookmarked)
 
   function handleShareClick () {
     const randomText = 'https://www.demowidget.com/search/somelement1/'
@@ -26,14 +21,14 @@ const PersonCard = ({ style }) => {
     })
   }
 
-  function handleBookmarkClick () {
-    Notify.info('Added to Bookmark')
+  function handleBookmarkClick (type) {
+    if (type === true) Notify.info('Removed from Bookmarks')
+    if (type === false) Notify.info('Added to Bookmarks')
   }
 
   return (
     <li
-      className={style === 'flex' ? 'search-list__item' : 'main-wrapper'}
-      id={uniqueId1}
+      className={layer === 'flex' ? 'search-list__item' : 'main-wrapper'}
     >
       <div className='search-list__item-header'>
         <div className='search-list__item-subtitle-wrapper'>
@@ -48,23 +43,21 @@ const PersonCard = ({ style }) => {
               onClick={() => handleShareClick()}
             />
           </div>
-          <div className='search-item__icons-wrapper'>
+          <div className={isBookmarked ? 'search-item__icons-wrapper__reversed' : 'search-item__icons-wrapper'}>
             <BookmarkSVG
               width={16}
               height={16}
               className='search-item__icon'
-              onClick={() => handleBookmarkClick()}
+              onClick={() => isBookmarked ? handleBookmarkClick(true) : handleBookmarkClick(false)}
             />
           </div>
         </div>
       </div>
       <div
-        className={style === 'flex' ? '' : 'search-list__grid-container'}
-        id={uniqueId2}
+        className={layer === 'flex' ? '' : 'search-list__grid-container'}
       >
         <div
-          className={style === 'flex' ? '' : 'search-list__item-body'}
-          id={uniqueId3}
+          className={layer === 'flex' ? '' : 'search-list__item-body'}
         >
           <div className='search-item__name-wrapper'>
             <p className='search-item__name-subtext filter-subtext'>Person</p>
@@ -81,15 +74,15 @@ const PersonCard = ({ style }) => {
                     <>
                       {tags.slice(0, 4).map((tag, tagIndex) => (
                         <li className='search-item__tags-item' key={tagIndex}>
-                        <p className='search-item__tag search-item__name-subtext filter-subtext'>
-                        {tag}
-                      </p>
-                      </li>
+                          <p className='search-item__tag search-item__name-subtext filter-subtext'>
+                            {tag}
+                          </p>
+                        </li>
                       ))}
                       <li className='search-item__tags-item search-item__tags-item__more'>
                         <p className='search-item__tag search-item__name-subtext filter-subtext'>
-                        +{remainingTags.length} More
-                      </p>
+                          +{remainingTags.length} More
+                        </p>
                       </li>
                     </>
 						      )
@@ -109,11 +102,10 @@ const PersonCard = ({ style }) => {
         </div>
         <div
           className={
-						style === 'flex'
+						layer === 'flex'
 						  ? 'search-item__user-info__wrapper'
 						  : 'search-item__user-info__wrapper no-margin'
 					}
-          id={uniqueId4}
         >
           {mockSearchHistory.map((item, index) => {
 					  const { nationality, birthdate, address } = item
@@ -148,11 +140,10 @@ const PersonCard = ({ style }) => {
         </div>
         <div
           className={
-						style === 'flex'
+						layer === 'flex'
 						  ? 'search-list__item-footer'
 						  : 'search-list__item-footer button-width'
 					}
-          id={uniqueId5}
         >
           <button
             type='button'

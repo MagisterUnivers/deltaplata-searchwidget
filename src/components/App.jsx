@@ -53,8 +53,8 @@ export const App = () => {
             path='saved-results'
             element={
               <PublicRoute>
-                 <SavedResultsPage />
-               </PublicRoute>
+                <SavedResultsPage />
+              </PublicRoute>
 						}
           />
           <Route path='search/:searchquery' element={<SearchPage />} />

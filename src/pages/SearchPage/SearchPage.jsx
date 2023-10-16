@@ -69,15 +69,15 @@ const SearchPage = () => {
           </div>
           <div className='search-list__wrapper'>
             <ul className='search-list'>
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
-              <PersonCard style={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
+              <PersonCard layer={cardStyle} />
             </ul>
           </div>
         </div>

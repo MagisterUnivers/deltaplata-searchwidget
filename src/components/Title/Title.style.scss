@@ -4,3 +4,27 @@
   font-weight: 600;
   line-height: calc(40.3 / 31);
 }
+
+.quantity-counter {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(15.6/12); 
+  
+  color: var(--main-heading-color);
+}
+
+.quantity-border {
+  display: flex;
+padding: 4px 8px;
+align-items: center;
+
+border-radius: 50px;
+border: 1px solid var(--main-border-color);
+}
+
+.title-wrapper__component {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}

@@ -65,8 +65,31 @@
 	outline: none;
 	border: none;
 
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%;
+
+	transition: background-color 0.5s ease-out,
+	color 0.5s ease-out,
+	fill 0.5s ease-out;
+	
+	color: var(--main-mute-color);
 	border-radius: 50px;
-	background: var(--main-whiteBG-color);
+	background-color: var(--main-whiteBG-color);
+
+	&:hover {
+		color: var(--main-white-color);
+		background-color: var(--main-darkBG-color);
+
+		.special-filter__icon {
+			fill: var(--main-white-color);
+		}
+	}
+}
+
+.special-filter__icon {
+	fill: var(--main-mute-color);
 }
 
 /**

@@ -73,7 +73,7 @@ export function SpecialFilter () {
         className='special-filter__button'
         onClick={() => handleRemoveAllFilter()}
       >
-        <Close width={16} height={16} />
+        <Close width={16} height={16} className='special-filter__icon' />
         Remove all filter
       </button>
       <CountryFilter />

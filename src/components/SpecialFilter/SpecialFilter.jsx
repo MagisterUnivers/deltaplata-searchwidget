@@ -52,18 +52,25 @@ export const SpecialFilter = () => {
           {mockSpecialFilterTags.map((e) => {
 					  const id = `checkbox-${e}`
             return (
-              <li className='special-filter__item' key={e}>
-                <input
-                  className='special-filter__checkbox-item'
-                  type='checkbox'
-                  id={id}
-                  defaultChecked={false}
+              <li key={e}>
+                <label className='special-filter__item'>
+                  <input
+                    className='special-filter__checkbox-item'
+                    type='checkbox'
+                    id={id}
+                    defaultChecked={false}
 									// checked={checkedItems[id]}
-                  onChange={(event) => {
+                    onChange={(event) => {
 									  handleCheckboxChange(event)
                   }}
-                />
-                <p className='special-filter__checkbox-subtext'>{e}</p>
+                  />
+                  <p
+                    className='special-filter__checkbox-subtext' onChange={(event) => {
+									  handleCheckboxChange(event)
+                  }}
+                  >{e}
+                  </p>
+                </label>
               </li>
 					  )
           })}

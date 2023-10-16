@@ -59,3 +59,43 @@
 .bulk-header__hint {
 	cursor: pointer;
 }
+
+.hint-container {
+  position: absolute;
+  width: 216px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px;
+  z-index: 1;
+
+	display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+	border-radius: 4px;
+  background-color: var(--main-darkBG-color);
+
+	bottom: 93px;
+	left: 185%;
+}
+
+.hint-text {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: calc(15.6/12);
+
+	color: var(--body-text-darkBG);
+}
+
+.hint-text__underline {
+	color: var(--main-white-color);
+	text-decoration: underline;
+}
+
+
+.hint-polygon {
+	position: absolute;
+	top: 75px;
+	right: 18.5px;
+}

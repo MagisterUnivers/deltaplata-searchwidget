@@ -25,7 +25,7 @@ export function Bulk () {
             width={16}
             height={16}
             style={{ cursor: 'pointer' }}
-            onClick={() => navigate('/home')}
+            onClick={() => navigate('')}
           />
         </div>
       </div>

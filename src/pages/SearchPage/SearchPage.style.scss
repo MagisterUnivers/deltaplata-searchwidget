@@ -42,10 +42,8 @@
 
 .title-wrapper__grid-selection {
 	display: flex;
-	gap: 8px;
+	gap: 24px;
 	align-items: center;
-
-	// width: 4%;
 }
 
 .title-wrapper__layer-switch {
@@ -61,4 +59,10 @@
 
 .not-active {
 	opacity: 50%;
+}
+
+.switchlayer-button__reset-style {
+	outline: none;
+	border: none;
+	background: none;
 }

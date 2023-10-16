@@ -36,7 +36,7 @@ export function SearchHistoryTable ({ tableDate, date }) {
                 <td className='table-subtext'>{item.time}</td>
                 <td
                   className='table-link__item link-pointer'
-                  onClick={() => navigate('/home')}
+                  onClick={() => navigate('/')}
                 >
                   <p className='table-subtext__link'>Search again</p>
                   <ArrowRight width={16} height={16} />

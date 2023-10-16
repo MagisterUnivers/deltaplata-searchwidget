@@ -13,6 +13,10 @@
 	color: var(--main-heading-color);
 }
 
+.table-head {
+	border-bottom: 1px solid var(--main-border-color);
+}
+
 
 .table-base {
 	border-collapse: collapse;

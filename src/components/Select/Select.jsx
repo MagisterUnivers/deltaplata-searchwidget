@@ -21,8 +21,8 @@ export function Select ({ type, data }) {
       {data?.map((data, index) => {
 			  return (
   <React.Fragment key={index}>
-    <option value={data.name}>
-      {data.name}
+    <option value={data}>
+      {data}
     </option>
   </React.Fragment>
 			  )

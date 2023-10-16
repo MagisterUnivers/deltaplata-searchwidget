@@ -40,22 +40,32 @@ export function SearchPage () {
             <Filter type='sort' data={mockSortOptions} />
           </div>
           <div className='title-wrapper__grid-selection'>
-            <FlexSVG
-              width={16}
-              height={16}
+            <button
               aria-label='switch layer to flex'
               title='Switch to Flex View'
-              className={cardStyle === 'flex' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+              disabled={cardStyle === 'flex'}
+              className='switchlayer-button__reset-style'
               onClick={() => switchLayer('flex')}
-            />
-            <GridSVG
-              width={16}
-              height={16}
+            >
+              <FlexSVG
+                width={16}
+                height={16}
+                className={cardStyle === 'flex' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+              />
+            </button>
+            <button
               aria-label='switch later to grid'
               title='Switch to Grid View'
-              className={cardStyle === 'grid' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+              disabled={cardStyle === 'grid'}
+              className='switchlayer-button__reset-style'
               onClick={() => switchLayer('grid')}
-            />
+            >
+              <GridSVG
+                width={16}
+                height={16}
+                className={cardStyle === 'grid' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+              />
+            </button>
           </div>
         </div>
         <div className='search-content__wrapper'>

@@ -8,7 +8,7 @@ export function Header () {
   const navigate = useNavigate()
 
   function handleSend () {
-    navigate('/home')
+    navigate('/')
   }
 
   return (

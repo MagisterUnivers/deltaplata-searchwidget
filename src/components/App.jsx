@@ -1,11 +1,8 @@
 import {
   Route,
   Routes,
-  Navigate,
-  useNavigate,
-  useLocation
+  Navigate
 } from 'react-router'
-import { useEffect } from 'react'
 import { PublicRoute, Layout } from 'components'
 import { WelcomePage } from '../pages/WelcomePage/WelcomePage'
 import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage'
@@ -14,23 +11,11 @@ import { SavedResultsPage } from '../pages/SavedResultsPage/SavedResultsPage'
 import '../index.css'
 
 export function App () {
-  const navigate = useNavigate()
-  const location = useLocation()
-
-  useEffect(() => {
-  	if (
-  		location.pathname === '/'
-  	) {
-  		navigate('/home')
-  	}
-  }, [navigate, location])
-
   return (
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route
-            path='home'
             index
             element={
               <PublicRoute>
@@ -56,7 +41,7 @@ export function App () {
           />
           <Route path='search/:searchquery' element={<SearchPage />} />
         </Route>
-        <Route path='*' element={<Navigate to='/home' />} />
+        <Route path='*' element={<Navigate to='/' />} />
       </Routes>
     </>
   )

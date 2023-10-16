@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-import { Notify } from 'notiflix'
 import { ReactComponent as Upload } from '../../assets/svg/upload.svg'
 import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right.svg'
 import { ReactComponent as Hint } from '../../assets/svg/info.svg'
@@ -18,7 +17,7 @@ export function Bulk () {
             height={14}
             className='bulk-header__hint'
             onClick={() =>
-						  Notify.info('Here a hint to support you. Coming through!!!')}
+						  alert('Here a hint to support you. Coming through!!!')}
           />
         </div>
         <div className='bulk-header__container'>

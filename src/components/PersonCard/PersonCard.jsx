@@ -1,4 +1,3 @@
-import { Notify } from 'notiflix'
 import { mockSearchHistory } from 'constants'
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg'
 import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg'
@@ -18,13 +17,13 @@ export function PersonCard ({ layer, isBookmarked }) {
     const randomText = 'https://www.demowidget.com/search/somelement1/'
 
     navigator.clipboard.writeText(randomText).then(() => {
-      Notify.info('Link added to your clipboard: ' + randomText)
+      alert('Link added to your clipboard: ' + randomText)
     })
   }
 
   function handleBookmarkClick (type) {
-    if (type === true) Notify.info('Removed from Bookmarks')
-    if (type === false) Notify.info('Added to Bookmarks')
+    if (type === true) alert('Removed from Bookmarks')
+    if (type === false) alert('Added to Bookmarks')
   }
 
   return (
@@ -117,21 +116,21 @@ export function PersonCard ({ layer, isBookmarked }) {
     <div className='search-item__flex' key={nationality}>
       {nationality === 'British'
         ? (
-  <>
-          <img
-            src={britainFlag}
-            alt='british national flag'
-            width={16}
-            height={16}
-          />
-          <p className='filter-subtext'>{nationality}</p>
-        </>
+          <>
+            <img
+              src={britainFlag}
+              alt='british national flag'
+              width={16}
+              height={16}
+            />
+            <p className='filter-subtext'>{nationality}</p>
+          </>
           )
         : (
-  <>
-          <GlobeSVG width={16} height={16} />
-          <p className='filter-subtext'>{nationality}</p>
-        </>
+          <>
+            <GlobeSVG width={16} height={16} />
+            <p className='filter-subtext'>{nationality}</p>
+          </>
           )}
     </div>
     <div className='search-item__flex' key={birthdate}>

@@ -35,7 +35,7 @@ export function SearchHistoryPage () {
 								  .map((item) => (
   <tr key={item.number}>
     <td>
-      <Link to='/home' className='table-subtext underline'>{item.name}</Link>
+      <Link to='/home' className='table-subtext'>{item.name}</Link>
     </td>
     <td className='table-subtext'>{item.type}</td>
     <td className='table-subtext'>{item.number}</td>
@@ -71,7 +71,7 @@ export function SearchHistoryPage () {
 								  .map((item) => (
   <tr key={item.number}>
     <td>
-      <Link to='/home' className='table-subtext underline'>{item.name}</Link>
+      <Link to='/home' className='table-subtext'>{item.name}</Link>
     </td>
     <td className='table-subtext'>{item.type}</td>
     <td className='table-subtext'>{item.number}</td>

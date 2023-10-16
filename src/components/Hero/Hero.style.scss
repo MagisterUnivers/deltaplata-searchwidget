@@ -21,7 +21,6 @@
 	display: flex;
 	width: 100%;
 	gap: 8px;
-	// flex: 1 0 0;
 }
 
 .hero-container__field {
@@ -34,7 +33,6 @@
 .hero-search {
 	display: flex;
 	align-items: center;
-	// width: 100%;
 	min-width: 457px;
 	height: auto;
 	position: relative;
@@ -79,10 +77,6 @@
 	text-align: center;
 
 	color: var(--main-text-color);
-}
-
-.hero-container__image {
-	//
 }
 
 .button-primary {

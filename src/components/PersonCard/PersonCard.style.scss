@@ -54,28 +54,11 @@
 	gap: 8px;
 }
 
-// .search-item__icons-wrapper {
-// 	display: flex;
-// 	width: 32px;
-// 	height: 32px;
-// 	padding: 8px;
-// 	cursor: pointer;
-// 	justify-content: center;
-// 	align-items: center;
-
-// 	border-radius: 1000px;
-// 	background: var(--main-white-color);
-// }
-
 /**
   |============================
   | Body
   |============================
 */
-
-.search-list__item-body {
-	//
-}
 
 .search-item__name-wrapper {
 	display: flex;
@@ -118,10 +101,6 @@
 
 .search-item__tags-item__more {
 	background: var(--main-accent2-color);
-}
-
-.search-item__tag {
-	//
 }
 
 /**
@@ -205,15 +184,6 @@
 			fill: var(--main-heading-color);
 		}
 	}
-}
-
-
-.search-list__item-header {
-	//
-}
-
-.search-item__icons {
-	//
 }
 
 /**

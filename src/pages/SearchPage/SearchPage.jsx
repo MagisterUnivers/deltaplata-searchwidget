@@ -34,9 +34,12 @@ const SearchPage = () => {
         <div className='title-wrapper push-content'>
           <div className='title-wrapper no-wrap'>
             <h1 className='title-wrapper__results-title'>
-              Results for:
-              <span className={searchQueryClass}>{searchquery}</span>
+              Results for: <span className={searchQueryClass}>{searchquery}</span>
             </h1>
+          </div>
+          <div className='title-wrapper no-wrap'>
+            <Filter type='filter' data={MockFilterOptions} />
+            <Filter type='sort' data={mockSortOptions} />
           </div>
           <div className='title-wrapper__grid-selection'>
             <FlexSVG
@@ -44,7 +47,7 @@ const SearchPage = () => {
               height={16}
               aria-label='switch layer to flex'
               title='Switch to Flex View'
-              className='title-wrapper__layer-switch'
+              className={cardStyle === 'flex' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
               onClick={() => switchLayer('flex')}
             />
             <GridSVG
@@ -52,13 +55,9 @@ const SearchPage = () => {
               height={16}
               aria-label='switch later to grid'
               title='Switch to Grid View'
-              className='title-wrapper__layer-switch'
+              className={cardStyle === 'grid' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
               onClick={() => switchLayer('grid')}
             />
-          </div>
-          <div className='title-wrapper no-wrap place-to__end'>
-            <Filter type='filter' data={MockFilterOptions} />
-            <Filter type='sort' data={mockSortOptions} />
           </div>
         </div>
         <div className='search-content__wrapper'>

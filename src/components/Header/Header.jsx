@@ -1,11 +1,14 @@
-import { SearchForm } from '../Forms/SearchForm/SearchForm'
+import { useNavigate } from 'react-router-dom'
+import { SearchForm } from 'components'
 import { ReactComponent as NextSvg } from '../../assets/svg/arrow-right-rendered.svg'
 import '../Container/Container.style.scss'
 import './Header.style.scss'
 
 export function Header () {
+  const navigate = useNavigate()
+
   function handleSend () {
-    // navigate to
+    navigate('/home')
   }
 
   return (

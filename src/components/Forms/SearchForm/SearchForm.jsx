@@ -10,14 +10,14 @@ export function SearchForm ({ location }) {
     search: ''
   })
 
-  const handleChange = (e) => {
+  function handleChange (e) {
     const { name, value } = e.target
     setInputData({ ...inputData, [name]: value })
     setSearchParams({ name: e.target.value })
-    console.log(searchParams.get('name')) // 'examplestring'
+    console.log(searchParams.get('name'))
   }
 
-  const handleSend = () => {
+  function handleSend () {
     navigate(`/search/${inputData.search}`)
   }
 

@@ -5,6 +5,7 @@ import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg'
 import { ReactComponent as ArrowRightSVG } from '../../assets/svg/arrow-right-rendered.svg'
 import { ReactComponent as CalendarSVG } from '../../assets/svg/calendar.svg'
 import { ReactComponent as MapSVG } from '../../assets/svg/map-pin-new.svg'
+import { ReactComponent as GlobeSVG } from '../../assets/svg/globe.svg'
 import britainFlag from '../../assets/image/britain_flag.png'
 import '../Filter/Filter.style.scss'
 import './PersonCard.style.scss'
@@ -114,15 +115,24 @@ export function PersonCard ({ layer, isBookmarked }) {
 					    return (
   <>
     <div className='search-item__flex' key={nationality}>
-      <img
-        src={
-												nationality === 'British' ? britainFlag : 'default flag'
-											}
-        alt='british national flag'
-        width={16}
-        height={16}
-      />
-      <p className='filter-subtext'>{nationality}</p>
+      {nationality === 'British'
+        ? (
+  <>
+          <img
+            src={britainFlag}
+            alt='british national flag'
+            width={16}
+            height={16}
+          />
+          <p className='filter-subtext'>{nationality}</p>
+        </>
+          )
+        : (
+  <>
+          <GlobeSVG width={16} height={16} />
+          <p className='filter-subtext'>{nationality}</p>
+        </>
+          )}
     </div>
     <div className='search-item__flex' key={birthdate}>
       <CalendarSVG width={16} height={16} />

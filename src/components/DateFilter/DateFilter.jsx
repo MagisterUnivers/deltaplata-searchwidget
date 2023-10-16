@@ -6,7 +6,7 @@ export function DateFilter () {
   const [dataValueFrom, setDataValueFrom] = useState('2023-07-24')
   const [dataValueTo, setDataValueTo] = useState('2023-08-30')
 
-  const handleDateChange = (e, inputId) => {
+  function handleDateChange (e, inputId) {
     const { value } = e.target
     if (inputId === 'from') {
       setDataValueFrom(value)

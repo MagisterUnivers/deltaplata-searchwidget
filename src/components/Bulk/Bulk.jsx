@@ -7,6 +7,7 @@ import './Bulk.style.scss'
 
 export function Bulk () {
   const navigate = useNavigate()
+
   return (
     <div className='bulk-uploader'>
       <div className='bulk-header__section'>

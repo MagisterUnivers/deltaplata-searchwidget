@@ -18,7 +18,6 @@ export function SpecialFilter () {
     })
   }
 
-  // Число включенных чекбоксов
   const numberOfChecked = Object.values(checkedItems).filter(
     (isChecked) => isChecked
   ).length

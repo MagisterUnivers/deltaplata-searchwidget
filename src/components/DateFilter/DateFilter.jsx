@@ -3,30 +3,17 @@ import '../Filter/Filter.style.scss'
 import './DateFilter.style.scss'
 
 export const DateFilter = () => {
-	const [dataValueFrom, SetDataValueFrom] = useState('2023-07-24'); //eslint-disable-line
-	const [dataValueTo, SetDataValueTo] = useState('2023-08-30'); //eslint-disable-line
+  const [dataValueFrom, setDataValueFrom] = useState('2023-07-24')
+  const [dataValueTo, setDataValueTo] = useState('2023-08-30')
 
-  const handleDateChange = (e) => {
+  const handleDateChange = (e, inputId) => {
     const { value } = e.target
-
-    console.log(value)
+    if (inputId === 'from') {
+      setDataValueFrom(value)
+    } else if (inputId === 'to') {
+      setDataValueTo(value)
+    }
   }
-
-  // const formatDate = (date, id) => {
-  // 	const parts = date.split('-');
-  // 	console.log(parts);
-
-  // 	if (id === 'from') return SetDataValueFrom(parts.reverse().join('/'));
-
-  // 	if (id === 'to') {
-  // 		const [year, month, day] = parts;
-  // 		return SetDataValueTo(`${day}/${month}/${year}`);
-  // 	}
-
-  // 	return date;
-  // };
-
-  // const handleIconClick = () => {};
 
   return (
     <div className='datefilter-wrapper'>
@@ -37,7 +24,7 @@ export const DateFilter = () => {
           className='datefilter-input'
           value={dataValueFrom}
           onChange={(event) => {
-					  handleDateChange(event)
+            handleDateChange(event, 'from')
           }}
         />
       </div>
@@ -48,7 +35,7 @@ export const DateFilter = () => {
           className='datefilter-input'
           value={dataValueTo}
           onChange={(event) => {
-					  handleDateChange(event)
+            handleDateChange(event, 'to')
           }}
         />
       </div>

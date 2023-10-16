@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { Select } from '../Select/Select'
 import {
-  mockCountryFilter,
   mockSpecialFilterTags
 } from '../../constants/mockData'
 import { ReactComponent as Close } from '../../assets/svg/close.svg'
+import { CountryFilter } from '../CountryFilter/CountryFilter'
 import './SpecialFilter.style.scss'
 
 export const SpecialFilter = () => {
@@ -83,10 +82,7 @@ export const SpecialFilter = () => {
         <Close width={16} height={16} />
         Remove all filter
       </button>
-      <div className='special-filter__country-filter'>
-        <h3 className='country-filter__title'>Country Filter</h3>
-        <Select type='country' data={mockCountryFilter} />
-      </div>
+      <CountryFilter />
     </div>
   )
 }

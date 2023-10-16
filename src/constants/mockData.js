@@ -94,7 +94,7 @@ export const mockSearchHistory = [
     tags: ['Bank']
   },
   {
-    name: '0x776198CCF446DFa1683...',
+    name: '0x776198CCF446DFa16832473575327387353',
     type: 'Cryptocurrency Wallet',
     number: '39',
     time: '11:30 AM',
@@ -110,7 +110,7 @@ export const mockSearchHistory = [
     tags: ['Bank']
   },
   {
-    name: '0x776198CCF446DFa1683...',
+    name: '0x776198CCF446DFa1683453546456456',
     type: 'Cryptocurrency Wallet',
     number: '64',
     time: '11:30 AM',

@@ -1,14 +1,9 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { Button, DateFilter, Title } from 'components'
-import { tableCellsName, mockSearchHistory } from 'constants'
-import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right.svg'
+import { Button, DateFilter, SearchHistoryTable, Title } from 'components'
 import '../../components/Section/Section.style.scss'
 import './SearchHistoryPage.style.scss'
 import '../WelcomePage/WelcomePage.style.scss'
 
 export function SearchHistoryPage () {
-  const navigate = useNavigate()
-
   return (
     <section className='section' aria-label='search history section'>
       <div className='container no-flex'>
@@ -19,75 +14,8 @@ export function SearchHistoryPage () {
         </div>
         <div className='horizontal-line push-content' />
         <div className='table-flex'>
-          <div className='table'>
-            <h2 className='table-date'>25 July, 2023</h2>
-            <table className='table-base'>
-              <thead className='table-head'>
-                <tr>
-                  {tableCellsName?.map((category) => {
-									  return <th key={category}>{category}</th>
-                  })}
-                </tr>
-              </thead>
-              <tbody className='table-body'>
-                {mockSearchHistory
-								  .filter((item) => item.date === '2023-07-25')
-								  .map((item) => (
-  <tr key={item.number}>
-    <td>
-      <Link to='/home' className='table-subtext'>{item.name}</Link>
-    </td>
-    <td className='table-subtext'>{item.type}</td>
-    <td className='table-subtext'>{item.number}</td>
-    <td className='table-subtext'>{item.time}</td>
-    <td
-      className='table-link__item link-pointer'
-      onClick={() => navigate('/home')}
-    >
-      <p className='table-subtext__link'>Search again</p>
-      <ArrowRight width={16} height={16} />
-    </td>
-  </tr>
-								  ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Second table */}
-
-          <div className='table'>
-            <h2 className='table-date'>24 July, 2023</h2>
-            <table className='table-base'>
-              <thead className='table-head'>
-                <tr>
-                  {tableCellsName?.map((category) => {
-									  return <th key={category}>{category}</th>
-                  })}
-                </tr>
-              </thead>
-              <tbody className='table-body'>
-                {mockSearchHistory
-								  .filter((item) => item.date === '2023-07-24')
-								  .map((item) => (
-  <tr key={item.number}>
-    <td>
-      <Link to='/home' className='table-subtext'>{item.name}</Link>
-    </td>
-    <td className='table-subtext'>{item.type}</td>
-    <td className='table-subtext'>{item.number}</td>
-    <td className='table-subtext'>{item.time}</td>
-    <td
-      className='table-link__item link-pointer'
-      onClick={() => navigate('/home')}
-    >
-      <p className='table-subtext__link'>Search again</p>
-      <ArrowRight width={16} height={16} />
-    </td>
-  </tr>
-								  ))}
-              </tbody>
-            </table>
-          </div>
+          <SearchHistoryTable tableDate='25 July, 2023' date='2023-07-25' />
+          <SearchHistoryTable tableDate='24 July, 2023' date='2023-07-24' />
         </div>
       </div>
     </section>

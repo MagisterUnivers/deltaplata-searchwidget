@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+![Tech Titans1](https://github.com/MagisterUnivers/TeamName-project/assets/36455862/a6beb350-7058-4ea1-9091-629e4a52db27)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h1>TechTitans-React/AssistantWidget</h1>
+<br />
+<br />
+<h2>Project Description</h2>
+<br />
+<br />
+<p>
+  This project was created by Tech Titans SEO to demonstrate the basic knowledge of
+  React, a popular JS framework for building dynamic and
+  static websites. The focus of this test is to showcase understanding of
+  fundamentals, including routing, data mapping, and component composition.
+</p>
+<br />
+<br />
+<h2>Technology that have been used:</h2>
+<br />
+<br />
+<ul>
+  <li>React</li>
+  <li>SCSS</li>
+  <li>HUSKY</li>
+  <li>JS ES6+</li>
+  <li>Standard.js</li>
+</ul>
+<br />
+<br />
+<h2>Project Structure</h2>
+<br />
+<br />
+<h3>The project structure is organized as follows:</h3>
+<ul>
+  <li>Assets/ # Contains all images and icons that was used in the project</li>
+  <li>
+    Components/ # Contains reusable components used throughout the application
+  </li>
+  <li>Constants/ # Contains all CONST project data</li>
+  <li>Pages/ # Contains the pages</li>
+  <li>Package.json # Project dependencies and scripts</li>
+  <li>README.md # Project documentation (you are here)</li>
+</ul>
+<br />
+<br />
+<h2>Getting Started</h2>
+<br />
+<br />
+<h3>To get started with the project, follow these steps:</h3>
+<ul>
+  <li>Clone the repository</li>
+  <li>Git Bash</li>
+  <li>Copy the code</li>
+  <li>
+    Git Clone /
+    <a href="https://github.com/MagisterUnivers/deltaplata-searchwidget"
+      >Link to repository</a
+    >
+  </li>
+</ul>
+<br />
+<br />
+<h3>Navigate to the project directory:</h3>
+<ul>
+  <li>Git bash</li>
+  <li>Copy the code</li>
+  <li>npm install</li>
+  <li>Start the development server [npm run start]</li>
+</ul>
+<br />
+<br />
+<h2>Available Scripts</h2>
+<br />
+<br />
+<h3>In the project directory, you can run the following scripts:</h3>
+<ul>
+  <li>
+    npm run start: Starts the development server on
+    http://localhost:3000
+  </li>
+  <li>npm run build: Builds the application for production.</li>
+  <li>npm run lint:js: Runs the linter to check for code quality issues</li>
+</ul>
+<br />
+<br />
+<h2>Contributing</h2>
+<br />
+<br />
+<h3>
+  If you`d like to contribute to this project, you can follow these steps:
+</h3>
+<ul>
+  <li>For the repository on GitHub</li>
+  <li>Clone your forked repository to your local machine</li>
+  <li>Create a new branch for your changes</li>
+  <li>Make your modifications and additions in the new branch</li>
+  <li>Push your branch to your forked repository</li>
+  <li>Submit a pull request to the original repository</li>
+</ul>
+<br />
+<br />
+<h2>Main functionality</h2>
+<br />
+<br />
+<p>
+The main goal of the project is to create an assistant (assistant). Using its search, we can find clients in a minimalistically designed admin panel. There are cards for users, there are layer switches. This way you can save and delete saved searches.
+</p>
+<br />
+<br />
+<h2>License</h2>
+<br />
+<br />
+<h4>This project is licensed under the MIT License</h4>
+<br />
+<br />
+<h2>Acknowledgments</h2>
+<br />
+<br />
+<p>
+  This project was created, since i am entered the testing period in that company, and get the project. Reusable, optimazed code, components - based,
+  pretty structure.
+</p>

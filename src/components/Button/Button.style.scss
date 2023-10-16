@@ -12,7 +12,7 @@
 
 	outline: none;
 	border: none;
-	transition: background-color 0.5s ease-out, color 0.5s ease-out, fill 0.5s ease-out;
+	transition: background-color 150ms ease-out, color 150ms ease-out, fill 150ms ease-out;
 
 	border-radius: 50px;
 	background-color: var(--main-whiteBG-color);
@@ -36,9 +36,9 @@
 		gap: 8px;
 	
 		transition:
-			background-color 0.5s ease-out,
-			fill 0.5s ease-out,
-			color 0.5s ease-out;
+			background-color 150ms ease-out,
+			fill 150ms ease-out,
+			color 150ms ease-out;
 	
 		border-radius: 50px;
 		border: 1px solid var(--main-border-color);

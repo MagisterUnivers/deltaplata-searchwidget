@@ -14,7 +14,7 @@ export function HashViewComponent ({ type, data }) {
         {data.map((e) => {
           return (
             <li key={e} className='recentsearch-list__item' onClick={() => navigate('/home')}>
-              <Hash width={16} height={16} />{' '}
+              <Hash width={16} height={16} className='recentsearch-list__icon' />{' '}
               <p className='recentsearch-subtitle'>{e}</p>
             </li>
           )

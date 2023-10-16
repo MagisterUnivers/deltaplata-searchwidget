@@ -12,9 +12,20 @@
 
 	outline: none;
 	border: none;
+	transition: background-color 0.5s ease-out, color 0.5s ease-out, fill 0.5s ease-out;
 
 	border-radius: 50px;
-	background: var(--main-whiteBG-color);
+	background-color: var(--main-whiteBG-color);
+
+
+	&:hover {
+		background-color: var(--main-darkBG-color);
+		color: var(--main-white-color);
+
+		.color {
+			fill: var(--main-white-color);
+		}
+	}
 }
 
 
@@ -46,4 +57,8 @@
 
 .font-size {
 	font-size: 14px;
+}
+
+.color {
+	fill: var(--main-mute-color);
 }

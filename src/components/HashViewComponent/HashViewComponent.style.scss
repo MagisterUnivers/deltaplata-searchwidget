@@ -34,13 +34,27 @@
 	align-items: center;
 
 cursor: pointer;
+transition: background-color 0.5s ease-out,
+color 0.5s ease-out,
+fill 0.5s ease-out;
 
 	border-radius: 4px;
-	background: var(--main-whiteBG-color);
+	background-color: var(--main-whiteBG-color);
 
 	&:hover {
-		// in the future
+background-color: var(--main-darkBG-color);
+
+		.recentsearch-list__icon,
+		.recentsearch-subtitle
+		 {
+			fill: var(--main-white-color);
+			color: var(--main-white-color);
+		}
 	}
+}
+
+.recentsearch-list__icon {
+	fill: var(--main-mute-color);
 }
 
 .recentsearch-subtitle {

@@ -9,7 +9,7 @@ export function Button ({ text, ariaLabel, className, type }) {
     case 'trash':
       buttonContents = (
         <>
-          <Trash width={16} height={16} />
+          <Trash width={16} height={16} className='color' />
           {text}
         </>
       )

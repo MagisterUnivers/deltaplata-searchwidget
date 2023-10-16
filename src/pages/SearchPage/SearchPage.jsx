@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom'
 import {
   MockFilterOptions,
   mockMetaTags,
-  mockSortOptions
+  mockSortOptions,
+  mockSpecialFilterTags
 } from 'constants'
 import { PersonCard, Bulk, Filter, HashViewComponent } from 'components'
 import { ReactComponent as GridSVG } from '../../assets/svg/grid-layer.svg'
@@ -65,15 +66,9 @@ export function SearchPage () {
           </div>
           <div className='search-list__wrapper'>
             <ul className='search-list'>
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
-              <PersonCard layer={cardStyle} />
+              {mockSpecialFilterTags.slice(0, 9).map(() => {
+                return <PersonCard layer={cardStyle} />
+              })}
             </ul>
           </div>
         </div>

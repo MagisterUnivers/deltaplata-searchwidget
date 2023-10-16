@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import {
   mockSpecialFilterTags
-} from '../../constants/mockData'
+} from 'constants'
+import { CountryFilter } from 'components'
 import { ReactComponent as Close } from '../../assets/svg/close.svg'
-import { CountryFilter } from '../CountryFilter/CountryFilter'
 import './SpecialFilter.style.scss'
 
-export const SpecialFilter = () => {
+export function SpecialFilter () {
   const [checkedItems, setCheckedItems] = useState({})
 
-  const handleCheckboxChange = (e) => {
+  function handleCheckboxChange (e) {
     const { id, checked } = e.target
 
     setCheckedItems({
@@ -23,19 +23,16 @@ export const SpecialFilter = () => {
     (isChecked) => isChecked
   ).length
 
-  const resetCheckboxes = () => {
+  function resetCheckboxes () {
     const checkboxes = document.querySelectorAll(
       '.special-filter__checkbox-item'
     )
-    //  Выбрал все чекбоксы (айтемы)
-
-    // Прошелся по всем, и повыключал им галочки
     checkboxes.forEach((checkbox) => {
       checkbox.checked = false
     })
   }
 
-  const handleRemoveAllFilter = () => {
+  function handleRemoveAllFilter () {
     setCheckedItems({})
     resetCheckboxes()
   }
@@ -58,7 +55,6 @@ export const SpecialFilter = () => {
                     type='checkbox'
                     id={id}
                     defaultChecked={false}
-									// checked={checkedItems[id]}
                     onChange={(event) => {
 									  handleCheckboxChange(event)
                     }}
@@ -69,11 +65,10 @@ export const SpecialFilter = () => {
                   </p>
                 </label>
               </li>
-					  )
+            )
           })}
         </ul>
       </div>
-      {/* <div className="special-filter__scrollbar"></div> */}
       <button
         type='button'
         className='special-filter__button'

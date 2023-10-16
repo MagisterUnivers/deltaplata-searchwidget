@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Filter } from '../../components/Filter/Filter'
 import {
   MockFilterOptions,
   mockMetaTags,
   mockSortOptions
-} from '../../constants/mockData'
-import { Bulk } from '../../components/Bulk/Bulk'
-import { PersonCard } from '../../components/PersonCard/PersonCard'
-import { HashViewComponent } from '../../components/HashViewComponent/HashViewComponent'
+} from 'constants'
+import { PersonCard, Bulk, Filter, HashViewComponent } from 'components'
 import { ReactComponent as GridSVG } from '../../assets/svg/grid-layer.svg'
 import { ReactComponent as FlexSVG } from '../../assets/svg/flex-layer.svg'
 import '../../components/Container/Container.style.scss'
@@ -16,7 +13,7 @@ import '../WelcomePage/WelcomePage.style.scss'
 import '../../components/Section/Section.style.scss'
 import './SearchPage.style.scss'
 
-const SearchPage = () => {
+export function SearchPage () {
   const [cardStyle, SetCardStyle] = useState('flex')
   const { searchquery } = useParams()
   const searchQueryClass =
@@ -84,5 +81,3 @@ const SearchPage = () => {
     </section>
   )
 }
-
-export default SearchPage

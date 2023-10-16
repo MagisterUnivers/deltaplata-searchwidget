@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { ReactComponent as SearchLoop } from '../../../assets/svg/search.svg'
 import '../../Header/Header.style.scss'
 
-const SearchForm = ({ location }) => {
+export function SearchForm ({ location }) {
   const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
   const [inputData, setInputData] = useState({
@@ -54,7 +54,7 @@ const SearchForm = ({ location }) => {
             handleSend()
           }}
         >
-          <div className='navbar-search'>
+          <label className='navbar-search'>
             <div className='search-button'>
               <SearchLoop width={14} height={14} className='search-svg' />
             </div>
@@ -66,10 +66,8 @@ const SearchForm = ({ location }) => {
               value={inputData.search}
               onChange={handleChange}
             />
-          </div>
+          </label>
         </form>
         )
   )
 }
-
-export default SearchForm

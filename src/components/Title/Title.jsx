@@ -1,6 +1,6 @@
 import './Title.style.scss'
 
-export const Title = ({ text, quantity }) => {
+export function Title ({ text, quantity }) {
   return (
     <div className='title-wrapper__component'>
       <h1 className='hero-title'>{text}</h1>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../Filter/Filter.style.scss'
 import './DateFilter.style.scss'
 
-export const DateFilter = () => {
+export function DateFilter () {
   const [dataValueFrom, setDataValueFrom] = useState('2023-07-24')
   const [dataValueTo, setDataValueTo] = useState('2023-08-30')
 

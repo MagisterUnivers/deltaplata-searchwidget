@@ -1,6 +1,6 @@
 import './Select.style.scss'
 
-export const Select = ({ type, data }) => {
+export function Select ({ type, data }) {
   return (
     <select className='filter-select__menu'>
       <option value='default'>

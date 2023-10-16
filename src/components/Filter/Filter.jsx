@@ -1,7 +1,7 @@
-import { Select } from '../Select/Select'
+import { Select } from 'components'
 import './Filter.style.scss'
 
-export const Filter = ({ type, data }) => {
+export function Filter ({ type, data }) {
   return (
     <div className='filter-container'>
       <p className='filter-subtext'>

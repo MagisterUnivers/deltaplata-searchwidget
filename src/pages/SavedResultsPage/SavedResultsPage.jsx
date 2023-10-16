@@ -1,14 +1,11 @@
-import { Button } from '../../components/Button/Button'
-import { DateFilter } from '../../components/DateFilter/DateFilter'
-import { PersonCard } from '../../components/PersonCard/PersonCard'
-import { Title } from '../../components/Title/Title'
-import { mockSearchHistory } from '../../constants/mockData'
+import { useEffect, useState } from 'react'
+import { Button, DateFilter, PersonCard, Title } from 'components'
+import { mockSearchHistory } from 'constants'
 import '../../components/Section/Section.style.scss'
 import '../WelcomePage/WelcomePage.style.scss'
 import './SavedResultsPage.style.scss'
-import { useEffect, useState } from 'react'
 
-const SavedResultsPage = ({ search }) => {
+export function SavedResultsPage ({ search }) {
   const [elementCount, setElementCount] = useState(0)
 
   useEffect(() => {
@@ -33,5 +30,3 @@ const SavedResultsPage = ({ search }) => {
     </section>
   )
 }
-
-export default SavedResultsPage

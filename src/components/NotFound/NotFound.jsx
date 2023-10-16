@@ -1,9 +1,9 @@
 import robotsearch from '../../assets/image/robotsearch.png'
 import robotsearch2x from '../../assets/image/robotsearch@2x.png'
-import { Button } from '../Button/Button'
+import { Button } from 'components'
 import './NotFound.style.scss'
 
-export const NotFound = () => {
+export function NotFound () {
   return (
     <div className='not-found__container'>
       <picture>

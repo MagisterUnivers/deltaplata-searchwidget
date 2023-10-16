@@ -1,19 +1,16 @@
-import { Filter } from '../../components/Filter/Filter'
-import { Bulk } from '../../components/Bulk/Bulk'
-import { HashViewComponent } from '../../components/HashViewComponent/HashViewComponent'
-import {
+import
+{
   mockSortOptions,
   MockFilterOptions,
   mockMetaTags
-} from '../../constants/mockData'
-import { Hero } from '../../components/Hero/Hero'
-import { Title } from '../../components/Title/Title'
-import { SpecialFilter } from '../../components/SpecialFilter/SpecialFilter'
+}
+  from 'constants'
+import { SpecialFilter, Title, Hero, Bulk, HashViewComponent, Filter } from 'components'
 import '../../components/Container/Container.style.scss'
 import './WelcomePage.style.scss'
 import '../../components/Section/Section.style.scss'
 
-export const WelcomePage = () => {
+export function WelcomePage () {
   return (
     <section className='section' aria-label='welcome section'>
       <div className='container no-flex'>
@@ -39,5 +36,3 @@ export const WelcomePage = () => {
     </section>
   )
 }
-
-export default WelcomePage

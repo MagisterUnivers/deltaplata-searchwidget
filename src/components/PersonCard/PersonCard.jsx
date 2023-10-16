@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix'
-import { mockSearchHistory } from '../../constants/mockData'
+import { mockSearchHistory } from 'constants'
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg'
 import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg'
 import { ReactComponent as ArrowRightSVG } from '../../assets/svg/arrow-right-rendered.svg'
@@ -9,7 +9,7 @@ import britainFlag from '../../assets/image/britain_flag.png'
 import '../Filter/Filter.style.scss'
 import './PersonCard.style.scss'
 
-export const PersonCard = ({ layer, isBookmarked }) => {
+export function PersonCard ({ layer, isBookmarked }) {
   if (!layer) layer = 'flex'
   console.log(isBookmarked)
 
@@ -85,7 +85,7 @@ export const PersonCard = ({ layer, isBookmarked }) => {
                         </p>
                       </li>
                     </>
-						      )
+                  )
 						    } else {
 						      return tags.map((tag, tagIndex) => (
   <li className='search-item__tags-item' key={tagIndex}>

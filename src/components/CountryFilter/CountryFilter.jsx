@@ -1,9 +1,9 @@
-import { mockCountryFilter } from '../../constants/mockData'
-import { Select } from '../Select/Select'
+import { mockCountryFilter } from 'constants'
+import { Select } from 'components'
 import '../SpecialFilter/SpecialFilter.style.scss'
 import './CountryFilter.style.scss'
 
-export const CountryFilter = () => {
+export function CountryFilter () {
   return (
     <div className='special-filter__country-filter'>
       <h3 className='country-filter__title special-filter__title'>Country Filter</h3>

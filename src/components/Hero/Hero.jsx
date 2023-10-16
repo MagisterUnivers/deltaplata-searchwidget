@@ -1,9 +1,9 @@
-import SearchForm from '../Forms/SearchForm/SearchForm'
+import { SearchForm } from 'components'
 import robothiImage from '../../assets/image/robothi.png'
 import robothi2xImage from '../../assets/image/robothi@2x.png'
 import './Hero.style.scss'
 
-export const Hero = () => {
+export function Hero () {
   return (
     <div className='hero-container'>
       <picture>

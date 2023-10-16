@@ -5,7 +5,7 @@ import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right.svg'
 import { ReactComponent as Hint } from '../../assets/svg/info.svg'
 import './Bulk.style.scss'
 
-export const Bulk = () => {
+export function Bulk () {
   const navigate = useNavigate()
   return (
     <div className='bulk-uploader'>

@@ -1,15 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { Title } from '../../components/Title/Title'
-import { DateFilter } from '../../components/DateFilter/DateFilter'
-import { Button } from '../../components/Button/Button'
-import { mockSearchHistory } from '../../constants/mockData'
-import { tableCellsName } from '../../constants/tablecells'
+import { Button, DateFilter, Title } from 'components'
+import { tableCellsName, mockSearchHistory } from 'constants'
 import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right.svg'
 import '../../components/Section/Section.style.scss'
 import './SearchHistoryPage.style.scss'
 import '../WelcomePage/WelcomePage.style.scss'
 
-export const SearchHistoryPage = () => {
+export function SearchHistoryPage () {
   const navigate = useNavigate()
 
   return (

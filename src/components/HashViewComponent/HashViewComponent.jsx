@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { ReactComponent as Hash } from '../../assets/svg/hash.svg'
 import './HashViewComponent.style.scss'
 
-export const HashViewComponent = ({ type, data }) => {
+export function HashViewComponent ({ type, data }) {
   const navigate = useNavigate()
 
   return (

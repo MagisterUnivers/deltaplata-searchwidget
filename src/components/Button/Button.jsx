@@ -2,7 +2,7 @@ import { ReactComponent as Trash } from '../../assets/svg/trash.svg'
 import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right-rendered.svg'
 import './Button.style.scss'
 
-export const Button = ({ text, ariaLabel, className, type }) => {
+export function Button ({ text, ariaLabel, className, type }) {
   let buttonContents
 
   switch (type) {

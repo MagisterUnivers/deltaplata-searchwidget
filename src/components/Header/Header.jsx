@@ -1,9 +1,9 @@
-import SearchForm from '../Forms/SearchForm/SearchForm'
+import { SearchForm } from '../Forms/SearchForm/SearchForm'
 import { ReactComponent as NextSvg } from '../../assets/svg/arrow-right-rendered.svg'
 import '../Container/Container.style.scss'
 import './Header.style.scss'
 
-export const Header = () => {
+export function Header () {
   function handleSend () {
     // navigate to
   }

@@ -6,15 +6,14 @@ import {
   useLocation
 } from 'react-router'
 import { useEffect } from 'react'
-import { PublicRoute } from '../components/routes/PublicRoute'
-import { Layout } from '../components/Layout/Layout'
-import WelcomePage from '../pages/WelcomePage/WelcomePage'
+import { PublicRoute, Layout } from 'components'
+import { WelcomePage } from '../pages/WelcomePage/WelcomePage'
 import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage'
-import SearchPage from '../pages/SearchPage/SearchPage'
-import SavedResultsPage from '../pages/SavedResultsPage/SavedResultsPage'
+import { SearchPage } from '../pages/SearchPage/SearchPage'
+import { SavedResultsPage } from '../pages/SavedResultsPage/SavedResultsPage'
 import '../index.css'
 
-export const App = () => {
+export function App () {
   const navigate = useNavigate()
   const location = useLocation()
 

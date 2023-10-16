@@ -1,3 +1,4 @@
+import React from 'react'
 import './Select.style.scss'
 
 export function Select ({ type, data }) {
@@ -17,11 +18,13 @@ export function Select ({ type, data }) {
           }
         })()}
       </option>
-      {data?.map((data) => {
+      {data?.map((data, index) => {
 			  return (
-  <option value={data} key={data}>
-    {data}
-  </option>
+  <React.Fragment key={index}>
+    <option value={data.name}>
+      {data.name}
+    </option>
+  </React.Fragment>
 			  )
       })}
     </select>

@@ -29,7 +29,7 @@ export function SearchHistoryTable ({ tableDate, date }) {
             .map((item) => (
               <tr key={item.number}>
                 <td>
-                  <Link to='/home' className='table-subtext'>{item.name.length > 21 ? item.name.slice(0, 21) + '...' : item.name}</Link>
+                  <Link to='/home' className='table-subtext underline-hover'>{item.name.length > 21 ? item.name.slice(0, 21) + '...' : item.name}</Link>
                 </td>
                 <td className='table-subtext'>{item.type}</td>
                 <td className='table-subtext'>{item.number}</td>

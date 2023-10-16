@@ -28,10 +28,6 @@
 		text-align: left;
 	}
 
-	td {
-		cursor: pointer;
-	}
-
 .table-body > tr:nth-child(odd) {
 	border-bottom: 1px solid var(--main-border-color);
 	background: var(--main-whiteBG-color);
@@ -83,10 +79,15 @@
 
 	&:hover {
 		color: var(--main-heading-color);
-	text-decoration-line: underline;
 	}
 }
 
 .link-pointer {
 	cursor: pointer;
+}
+
+.underline-hover {
+	&:hover {
+		text-decoration: underline;
+	}
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {
   MockFilterOptions,
@@ -66,8 +66,12 @@ export function SearchPage () {
           </div>
           <div className='search-list__wrapper'>
             <ul className='search-list'>
-              {mockSpecialFilterTags.slice(0, 9).map(() => {
-                return <PersonCard layer={cardStyle} />
+              {mockSpecialFilterTags.slice(0, 9).map((index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <PersonCard layer={cardStyle} />
+                  </React.Fragment>
+                )
               })}
             </ul>
           </div>

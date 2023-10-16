@@ -1,3 +1,4 @@
+import React from 'react'
 import { mockSearchHistory } from 'constants'
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg'
 import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg'
@@ -71,7 +72,7 @@ export function PersonCard ({ layer, isBookmarked }) {
                 if (tags.length > 4) {
 						      const remainingTags = tags.slice(4)
                   return (
-                    <>
+                    <React.Fragment key={tags}>
                       {tags.slice(0, 4).map((tag, tagIndex) => (
                         <li className='search-item__tags-item' key={tagIndex}>
                           <p className='search-item__tag search-item__name-subtext filter-subtext'>
@@ -84,7 +85,7 @@ export function PersonCard ({ layer, isBookmarked }) {
                           +{remainingTags.length} More
                         </p>
                       </li>
-                    </>
+                    </React.Fragment>
                   )
 						    } else {
 						      return tags.map((tag, tagIndex) => (
@@ -112,7 +113,7 @@ export function PersonCard ({ layer, isBookmarked }) {
 
             if (item.name === 'Nora Frey Draeger') {
 					    return (
-  <>
+  <React.Fragment key={index}>
     <div className='search-item__flex' key={nationality}>
       {nationality === 'British'
         ? (
@@ -127,10 +128,10 @@ export function PersonCard ({ layer, isBookmarked }) {
           </>
           )
         : (
-          <>
+          <React.Fragment key={index}>
             <GlobeSVG width={16} height={16} />
             <p className='filter-subtext'>{nationality}</p>
-          </>
+          </React.Fragment>
           )}
     </div>
     <div className='search-item__flex' key={birthdate}>
@@ -141,7 +142,7 @@ export function PersonCard ({ layer, isBookmarked }) {
       <MapSVG width={16} height={16} />
       <p className='filter-subtext'>{address}</p>
     </div>
-  </>
+  </React.Fragment>
 					    )
 					  }
 					  return null

@@ -5,7 +5,6 @@
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 8px;
-
 	border-radius: 8px;
 	border: 1px solid var(--main-border-color);
 }
@@ -29,7 +28,6 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: calc(15.6 / 12);
-
 	color: var(--main-mute-color);
 }
 
@@ -50,9 +48,7 @@
 	align-items: center;
 	gap: 8px;
 	align-self: stretch;
-
 	cursor: pointer;
-
 	border-radius: 8px;
 	background: var(--main-whiteBG-color);
 }
@@ -68,14 +64,11 @@
   border: 1px solid #ccc;
   padding: 8px;
   z-index: 1;
-
 	display: inline-flex;
   justify-content: center;
   align-items: center;
-
 	border-radius: 4px;
   background-color: var(--main-darkBG-color);
-
 	bottom: 30px;
 	left: -70px;
 }
@@ -85,7 +78,6 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: calc(15.6/12);
-
 	color: var(--body-text-darkBG);
 }
 

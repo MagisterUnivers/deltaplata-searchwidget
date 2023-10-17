@@ -3,20 +3,16 @@
 	padding: 8px 12px;
 	align-items: center;
 	gap: 8px;
-
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 100%;
 	color: var(--main-mute-color);
-
 	outline: none;
 	border: none;
 	transition: background-color 150ms ease-out, color 150ms ease-out;
-
 	border-radius: 50px;
 	background-color: var(--main-whiteBG-color);
-
 
 	&:hover {
 		background-color: var(--main-darkBG-color);
@@ -28,20 +24,15 @@
 	}
 }
 
-
 .btn-search {
 	display: flex;
 	padding: 8px 12px;
 	align-items: center;
 	gap: 8px;
-
-	transition:
-		background-color 150ms ease-out,
-		color 150ms ease-out;
-
+	transition: background-color 150ms ease-out, color 150ms ease-out;
 	border-radius: 50px;
 	border: 1px solid var(--main-border-color);
-
+	
 	&:hover {
 		background-color: var(--main-darkBG-color);
 		color: var(--main-white-color);

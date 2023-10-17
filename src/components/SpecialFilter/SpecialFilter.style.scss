@@ -6,7 +6,6 @@
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 16px;
-
 	border-radius: 8px;
 	border: 1px solid var(--main-border-color);
 }
@@ -22,7 +21,6 @@
 	font-style: normal;
 	font-weight: 600;
 	line-height: calc(23.4 / 18);
-
 	color: var(--main-heading-color);
 }
 
@@ -33,10 +31,8 @@
 	align-items: flex-start;
 	gap: 8px;
 	align-self: stretch;
-
 	overflow-y: auto;
 	scrollbar-width: thin; /*  Firefox */
-
 	/* Chrome, Safari и Opera */
 	&::-webkit-scrollbar {
 		width: 12px;
@@ -45,7 +41,6 @@
 	&::-webkit-scrollbar-thumb {
 		width: 10px;
 		height: 30px;
-
 		background-color: var(--main-darkBG-color);
 		border-radius: 1000px;
 		border: 3px solid var(--main-whiteBG-color);
@@ -61,18 +56,13 @@
 	padding: 8px 12px;
 	align-items: center;
 	gap: 8px;
-
 	outline: none;
 	border: none;
-
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 100%;
-
-	transition: background-color 150ms ease-out,
-	color 150ms ease-out;
-	
+	transition: background-color 150ms ease-out, color 150ms ease-out;
 	color: var(--main-mute-color);
 	border-radius: 50px;
 	background-color: var(--main-whiteBG-color);
@@ -107,9 +97,7 @@
 .special-filter__checkbox-item {
 	width: 16px;
 	height: 16px;
-
 cursor: pointer;
-
 	border-radius: 4px;
 	border: 1px solid var(--main-border-color);
 }
@@ -119,9 +107,7 @@ cursor: pointer;
 	font-style: normal;
 	font-weight: 500;
 	line-height: calc(15.6 / 12);
-
-cursor: pointer;
-
+  cursor: pointer;
 	color: var(--main-text-color);
 }
 
@@ -139,7 +125,6 @@ padding: 4px 8px;
 justify-content: center;
 align-items: center;
 flex-shrink: 0;
-
 border-radius: 50px;
 border: 1px solid var(--main-border-color);
 }

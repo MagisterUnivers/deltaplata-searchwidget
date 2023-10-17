@@ -6,6 +6,7 @@ import '../../Header/Header.style.scss'
 export function SearchForm ({ location }) {
   const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
+
   const [inputData, setInputData] = useState({
     search: ''
   })

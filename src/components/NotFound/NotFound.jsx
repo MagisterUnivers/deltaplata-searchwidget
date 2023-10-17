@@ -1,15 +1,15 @@
 import { Button } from 'components'
-import robotsearch from '../../assets/image/robot-search.png'
-import robotsearch2x from '../../assets/image/robot-search@2x.png'
+import robotSearch from '../../assets/image/robot-search.png'
+import robotSearch2x from '../../assets/image/robot-search@2x.png'
 import './NotFound.style.scss'
 
 export function NotFound () {
   return (
     <div className='not-found__container'>
       <picture>
-        <source srcSet={robotsearch2x} media='(min-width: 1440px)' />
+        <source srcSet={robotSearch2x} media='(min-width: 1440px)' />
         <img
-          srcSet={robotsearch}
+          srcSet={robotSearch}
           alt='assistant looking for stuff'
           className='not-found__image'
           width={202.364}

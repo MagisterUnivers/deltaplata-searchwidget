@@ -8,6 +8,7 @@ export function DateFilter () {
 
   function handleDateChange (e, inputId) {
     const { value } = e.target
+
     if (inputId === 'from') {
       setDataValueFrom(value)
     } else if (inputId === 'to') {
@@ -16,27 +17,23 @@ export function DateFilter () {
   }
 
   return (
-    <div className='datefilter-wrapper'>
+    <div className='date-filter__wrapper'>
       <p className='datefilter-subtext filter-subtext'>Sort from</p>
       <div className='datefilter-input__wrapper'>
         <input
           type='date'
-          className='datefilter-input'
+          className='date-filter__input'
           value={dataValueFrom}
-          onChange={(event) => {
-            handleDateChange(event, 'from')
-          }}
+          onChange={(event) => handleDateChange(event, 'from')}
         />
       </div>
       <p className='datefilter-subtext filter-subtext'>to</p>
       <div className='datefilter-input__wrapper'>
         <input
           type='date'
-          className='datefilter-input'
+          className='date-filter__input'
           value={dataValueTo}
-          onChange={(event) => {
-            handleDateChange(event, 'to')
-          }}
+          onChange={(event) => handleDateChange(event, 'to')}
         />
       </div>
     </div>

@@ -5,12 +5,7 @@ import './SearchhistoryTable.style.scss'
 
 export function SearchHistoryTable ({ tableDate, date }) {
   const navigate = useNavigate()
-
-  console.log(tableCellsName)
-  console.log(mockSearchHistory)
-
-  console.log(tableDate)
-  console.log(date)
+  const filteredData = mockSearchHistory.filter((item) => item.date === date)
 
   return (
     <div className='table'>
@@ -24,25 +19,23 @@ export function SearchHistoryTable ({ tableDate, date }) {
           </tr>
         </thead>
         <tbody className='table-body'>
-          {mockSearchHistory
-            .filter((item) => item.date === date)
-            .map((item) => (
-              <tr key={item.number}>
-                <td>
-                  <Link to='/home' className='table-subtext underline-hover'>{item.name.length > 21 ? item.name.slice(0, 21) + '...' : item.name}</Link>
-                </td>
-                <td className='table-subtext'>{item.type}</td>
-                <td className='table-subtext'>{item.number}</td>
-                <td className='table-subtext'>{item.time}</td>
-                <td
-                  className='table-link__item link-pointer'
-                  onClick={() => navigate('/')}
-                >
-                  <p className='table-subtext__link'>Search again</p>
-                  <ArrowRight width={16} height={16} />
-                </td>
-              </tr>
-            ))}
+          {filteredData.map((item) => (
+            <tr key={item.number}>
+              <td>
+                <Link to='/home' className='table-subtext underline-hover'>{item.name.length > 21 ? item.name.slice(0, 21) + '...' : item.name}</Link>
+              </td>
+              <td className='table-subtext'>{item.type}</td>
+              <td className='table-subtext'>{item.number}</td>
+              <td className='table-subtext'>{item.time}</td>
+              <td
+                className='table-link__item link-pointer'
+                onClick={() => navigate('/')}
+              >
+                <p className='table-subtext__link'>Search again</p>
+                <ArrowRight width={16} height={16} />
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

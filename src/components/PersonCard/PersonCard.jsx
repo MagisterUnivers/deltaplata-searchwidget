@@ -14,12 +14,11 @@ export function PersonCard ({ layer, isBookmarked }) {
   if (!layer) layer = 'grid'
   console.log(isBookmarked)
 
-  function handleShareClick () {
+  async function handleShareClick () {
     const randomText = 'https://www.demowidget.com/search/somelement1/'
 
-    navigator.clipboard.writeText(randomText).then(() => {
-      alert('Link added to your clipboard: ' + randomText)
-    })
+    await navigator.clipboard.writeText(randomText)
+    alert('Link added to your clipboard: ' + randomText)
   }
 
   function handleBookmarkClick (type) {

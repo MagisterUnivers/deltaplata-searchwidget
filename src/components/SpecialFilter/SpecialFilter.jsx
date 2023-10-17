@@ -18,14 +18,10 @@ export function SpecialFilter () {
     })
   }
 
-  const numberOfChecked = Object.values(checkedItems).filter(
-    (isChecked) => isChecked
-  ).length
+  const numberOfChecked = Object.values(checkedItems).filter(Boolean).length
 
   function resetCheckboxes () {
-    const checkboxes = document.querySelectorAll(
-      '.special-filter__checkbox-item'
-    )
+    const checkboxes = document.querySelectorAll('.special-filter__checkbox-item')
     checkboxes.forEach((checkbox) => {
       checkbox.checked = false
     })
@@ -44,23 +40,22 @@ export function SpecialFilter () {
       </div>
       <div className='special-filter__checkbox-wrapper'>
         <ul className='special-filter__list'>
-          {mockSpecialFilterTags.map((e) => {
-					  const id = `checkbox-${e}`
+          {mockSpecialFilterTags.map((elem) => {
+            const id = `checkbox-${elem}`
+
             return (
-              <li key={e}>
+              <li key={elem}>
                 <label className='special-filter__item'>
                   <input
                     className='special-filter__checkbox-item'
                     type='checkbox'
                     id={id}
                     defaultChecked={false}
-                    onChange={(event) => {
-									  handleCheckboxChange(event)
-                    }}
+                    onChange={(event) => handleCheckboxChange(event)}
                   />
                   <p
                     className='special-filter__checkbox-subtext'
-                  >{e}
+                  >{elem}
                   </p>
                 </label>
               </li>

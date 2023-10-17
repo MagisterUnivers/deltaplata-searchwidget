@@ -2,21 +2,26 @@ import React from 'react'
 import './Select.style.scss'
 
 export function Select ({ type, data }) {
+  let text
+
+  switch (type) {
+    case 'filter':
+      text = 'Type'
+      break
+    case 'sort':
+      text = 'Lasted Updated'
+      break
+    case 'country':
+      text = 'Netherlands'
+      break
+    default:
+		  text = 'Type'
+  }
+
   return (
     <select className='filter-select__menu'>
       <option value='default'>
-        {(() => {
-				  switch (type) {
-				    case 'filter':
-				      return 'Type'
-            case 'sort':
-				      return 'Lasted Updated'
-            case 'country':
-				      return 'Netherlands'
-            default:
-				      return 'Type'
-          }
-        })()}
+        {text}
       </option>
       {data?.map((data, index) => {
 			  return (

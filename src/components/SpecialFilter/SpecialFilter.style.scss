@@ -1,7 +1,6 @@
 .special-filter__container {
 	display: flex;
 	width: 285px;
-	height: -webkit-fill-available;
 	padding: 16px;
 	flex-direction: column;
 	align-items: flex-start;
@@ -32,23 +31,6 @@
 	gap: 8px;
 	align-self: stretch;
 	overflow-y: auto;
-	scrollbar-width: thin; /*  Firefox */
-	/* Chrome, Safari и Opera */
-	&::-webkit-scrollbar {
-		width: 12px;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		width: 10px;
-		height: 30px;
-		background-color: var(--main-darkBG-color);
-		border-radius: 1000px;
-		border: 3px solid var(--main-whiteBG-color);
-	}
-
-	&::-webkit-scrollbar-track {
-		background-color: lightgray;
-	}
 }
 
 .special-filter__button {

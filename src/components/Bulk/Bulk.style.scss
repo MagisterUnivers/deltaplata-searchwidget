@@ -33,6 +33,7 @@
 
 .bulk-header__container {
 	display: flex;
+	align-items: flex-start;
 
 	&:first-of-type {
 		gap: 4px;
@@ -56,7 +57,7 @@
 .bulk-header__hint {
 	border: none;
 	background-color: transparent;
-	
+
 	&:hover {
 		.hint-container {
 			display: inline-flex;
@@ -68,17 +69,23 @@
 .hint-container {
   position: absolute;
   width: 216px;
-  background: #f0f0f0;
-  padding: 8px;
+  padding-bottom: 10px;
   z-index: 1;
+  bottom: 100%;
+  right: -19.5px;
+	display: none;
+	cursor: default;
+}
+
+.hint-container__content-wrapper {
 	display: inline-flex;
   justify-content: center;
   align-items: center;
 	border-radius: 4px;
   background-color: var(--main-darkBG-color);
-  bottom: 31px;
-  right: -19.5px;
-	display: none;
+	padding: 8px;
+	width: 100%;
+	position: relative;
 }
 
 .hint-text {

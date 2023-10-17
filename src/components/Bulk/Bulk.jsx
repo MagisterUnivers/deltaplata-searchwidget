@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import { CustomAlert } from 'components'
@@ -11,18 +11,6 @@ import './Bulk.style.scss'
 export function Bulk () {
   const navigate = useNavigate()
   const [showAlert, setShowAlert] = useState(false)
-  const [isHintVisible, setIsHintVisible] = useState(false)
-  const hintContainerRef = useRef(null)
-
-  function toggleHint () {
-    setIsHintVisible(!isHintVisible)
-  };
-
-  function hideHint () {
-    hintContainerRef.current = setTimeout(() => {
-      setIsHintVisible(false)
-    }, 2000)
-  }
 
   function displayAlert () {
     setShowAlert(true)
@@ -37,18 +25,17 @@ export function Bulk () {
       <div className='bulk-header__section'>
         <div className='bulk-header__container'>
           <h2 className='bulk-title'>Bulk Upload</h2>
-          <Hint
-            width={14}
-            height={14}
-            className='bulk-header__hint'
-            onMouseEnter={toggleHint}
-            onMouseLeave={hideHint}
-          />
-          {isHintVisible && (
-            <div className='hint-container' ref={hintContainerRef}>
+          <button type='button' aria-label='hint button, to download file' className='bulk-header__hint'>
+            <Hint
+              width={14}
+              height={14}
+            />
+            <div className='hint-container'>
               <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span onClick={() => displayAlert()} className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
               <Polygon width={16} height={10.82} className='hint-polygon' />
-            </div>)}
+            </div>
+          </button>
+
           {showAlert &&
             createPortal(
               <CustomAlert message='File sended' className={`custom-alert ${showAlert ? '' : 'hide'}`} />,

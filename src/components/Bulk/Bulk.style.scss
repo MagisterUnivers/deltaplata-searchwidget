@@ -54,7 +54,15 @@
 }
 
 .bulk-header__hint {
-	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	
+	&:hover {
+		.hint-container {
+			display: inline-flex;
+			text-align: left;
+		}
+	}
 }
 
 .hint-container {
@@ -70,6 +78,7 @@
   background-color: var(--main-darkBG-color);
   bottom: 31px;
   right: -19.5px;
+	display: none;
 }
 
 .hint-text {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import { CustomAlert } from 'components'
@@ -14,35 +14,22 @@ export function Bulk () {
   const [isHintVisible, setIsHintVisible] = useState(false)
   const hintContainerRef = useRef(null)
 
-  function toggleHint (event) {
-    event.stopPropagation()
+  function toggleHint () {
     setIsHintVisible(!isHintVisible)
   };
 
-  useEffect(() => {
-    function handleClickOutside (event) {
-      if (hintContainerRef.current && !hintContainerRef.current.contains(event.target)) {
-        setIsHintVisible(false)
-      }
-    }
-
-    if (isHintVisible) {
-      document.addEventListener('click', handleClickOutside)
-    } else {
-      document.removeEventListener('click', handleClickOutside)
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside)
-    }
-  }, [isHintVisible])
+  function hideHint () {
+    hintContainerRef.current = setTimeout(() => {
+      setIsHintVisible(false)
+    }, 2000)
+  }
 
   function displayAlert () {
     setShowAlert(true)
 
     setTimeout(() => {
       setShowAlert(false)
-    }, 3000)
+    }, 5000)
   }
 
   return (
@@ -54,7 +41,8 @@ export function Bulk () {
             width={14}
             height={14}
             className='bulk-header__hint'
-            onClick={(event) => toggleHint(event)}
+            onMouseEnter={toggleHint}
+            onMouseLeave={hideHint}
           />
           {isHintVisible && (
             <div className='hint-container' ref={hintContainerRef}>

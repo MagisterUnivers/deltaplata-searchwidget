@@ -60,6 +60,7 @@
 }
 
 .search-item__name-subtext {
+	transition: color 150ms ease-out;
 	font-weight: 400;
 }
 
@@ -86,6 +87,15 @@
 	align-items: center;
 	border-radius: 50px;
 	border: 1px solid var(--main-border-color);
+	transition: background-color 150ms ease-out;
+
+	&:hover {
+		background-color: var(--main-darkBG-color);
+
+		.search-item__name-subtext {
+			color: var(--main-white-color);
+		}
+	}
 }
 
 .search-item__tags-item__more {

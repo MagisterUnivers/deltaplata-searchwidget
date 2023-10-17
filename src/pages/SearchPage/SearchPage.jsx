@@ -6,7 +6,7 @@ import {
   mockSortOptions,
   mockSpecialFilterTags
 } from 'helpers'
-import { PersonCard, Bulk, Filter, HashViewComponent } from 'components'
+import { PersonCard, Bulk, Filter, HashViewComponent, NotFound } from 'components'
 import { ReactComponent as GridSVG } from '../../assets/svg/grid-layer.svg'
 import { ReactComponent as FlexSVG } from '../../assets/svg/flex-layer.svg'
 import '../../components/Container/Container.style.scss'
@@ -51,47 +51,52 @@ export function SearchPage () {
           <div className='title-wrapper no-wrap'>
             <Filter type='filter' data={MockFilterOptions} />
             <Filter type='sort' data={mockSortOptions} />
-          </div>
-          <div className='title-wrapper__grid-selection'>
-            <button
-              aria-label='switch layer to flex'
-              title='Switch to Grid View'
-              disabled={cardStyle === 'grid'}
-              className='switchlayer-button__reset-style'
-              onClick={() => switchLayer('grid')}
-            >
-              <FlexSVG
-                width={16}
-                height={16}
-                className={cardStyle === 'grid' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
-              />
-            </button>
-            <button
-              aria-label='switch later to grid'
-              title='Switch to List View'
-              disabled={cardStyle === 'list'}
-              className='switchlayer-button__reset-style'
-              onClick={() => switchLayer('list')}
-            >
-              <GridSVG
-                width={16}
-                height={16}
-                className={cardStyle === 'list' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
-              />
-            </button>
+            <div className='title-wrapper__grid-selection'>
+              <button
+                aria-label='switch layer to flex'
+                title='Switch to Grid View'
+                disabled={cardStyle === 'grid'}
+                className='switchlayer-button__reset-style'
+                onClick={() => switchLayer('grid')}
+              >
+                <FlexSVG
+                  width={16}
+                  height={16}
+                  className={cardStyle === 'grid' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+                />
+              </button>
+              <button
+                aria-label='switch later to grid'
+                title='Switch to List View'
+                disabled={cardStyle === 'list'}
+                className='switchlayer-button__reset-style'
+                onClick={() => switchLayer('list')}
+              >
+                <GridSVG
+                  width={16}
+                  height={16}
+                  className={cardStyle === 'list' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+                />
+              </button>
+            </div>
           </div>
         </div>
-        <div className='search-content__wrapper'>
+        <div className='search-content__wrapper' style={value === 'test' ? { gap: '0px' } : {}}>
           <div className='widgets-wrapper'>
             <Bulk />
             <HashViewComponent type='recentviewed' data={mockMetaTags} />
             <HashViewComponent type='lastvisited' data={mockMetaTags} />
           </div>
-          <div className='search-list__wrapper'>
-            <ul className='search-list'>
-              {mockSpecialFilterTags.slice(0, 9).map((index) => <PersonCard key={index} layer={cardStyle} />
-              )}
-            </ul>
+          <div className='search-list__wrapper' style={value === 'test' ? { margin: '0 auto' } : {}}>
+            {value === 'test'
+              ? (
+                <NotFound />
+                )
+              : (
+                <ul className='search-list'>
+                  {mockSpecialFilterTags.slice(0, 9).map((index) => <PersonCard key={index} layer={cardStyle} />)}
+                </ul>
+                )}
           </div>
         </div>
       </div>

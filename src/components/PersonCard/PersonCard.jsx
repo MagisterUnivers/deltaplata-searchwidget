@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { mockSearchHistory } from 'constants'
+import { mockSearchHistory } from 'helpers'
 import { CustomAlert } from 'components'
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg'
 import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg'

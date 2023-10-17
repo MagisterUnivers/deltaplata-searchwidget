@@ -1,4 +1,4 @@
-import { mockCountryFilter } from 'constants'
+import { mockCountryFilter } from 'helpers'
 import { Select } from 'components'
 import '../SpecialFilter/SpecialFilter.style.scss'
 import './CountryFilter.style.scss'

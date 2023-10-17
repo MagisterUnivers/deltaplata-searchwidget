@@ -5,7 +5,7 @@ import {
   mockMetaTags,
   mockSortOptions,
   mockSpecialFilterTags
-} from 'constants'
+} from 'helpers'
 import { PersonCard, Bulk, Filter, HashViewComponent } from 'components'
 import { ReactComponent as GridSVG } from '../../assets/svg/grid-layer.svg'
 import { ReactComponent as FlexSVG } from '../../assets/svg/flex-layer.svg'

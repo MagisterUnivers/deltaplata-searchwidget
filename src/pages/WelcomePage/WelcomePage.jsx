@@ -2,7 +2,7 @@ import {
   mockSortOptions,
   MockFilterOptions,
   mockMetaTags
-} from 'constants'
+} from 'helpers'
 import { SpecialFilter, Title, Hero, Bulk, HashViewComponent, Filter } from 'components'
 import '../../components/Container/Container.style.scss'
 import './WelcomePage.style.scss'

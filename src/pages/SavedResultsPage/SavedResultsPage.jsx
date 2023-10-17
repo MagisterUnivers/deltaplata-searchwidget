@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, DateFilter, PersonCard, Title } from 'components'
-import { mockSearchHistory } from 'constants'
+import { mockSearchHistory } from 'helpers'
 import '../../components/Section/Section.style.scss'
 import '../WelcomePage/WelcomePage.style.scss'
 import './SavedResultsPage.style.scss'

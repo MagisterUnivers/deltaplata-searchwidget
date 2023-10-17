@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { tableCellsName, mockSearchHistory } from 'constants'
+import { tableCellsName, mockSearchHistory } from 'helpers'
 import { ReactComponent as ArrowRight } from '../../../assets/svg/arrow-right.svg'
 import './SearchhistoryTable.style.scss'
 

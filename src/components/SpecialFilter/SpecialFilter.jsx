@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   mockSpecialFilterTags
-} from 'constants'
+} from 'helpers'
 import { CountryFilter } from 'components'
 import { ReactComponent as Close } from '../../assets/svg/close.svg'
 import './SpecialFilter.style.scss'

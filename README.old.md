@@ -1,1 +1,0 @@
-# DeltaPlata-SearchWidget

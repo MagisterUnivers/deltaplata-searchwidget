@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {
   MockFilterOptions,
@@ -15,14 +15,12 @@ import '../../components/Section/Section.style.scss'
 import './SearchPage.style.scss'
 
 export function SearchPage () {
-  const [cardStyle, SetCardStyle] = useState('flex')
+  const [cardStyle, SetCardStyle] = useState('grid')
   const { searchquery } = useParams()
-  const searchQueryClass =
-  searchquery.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
-  console.log(searchquery)
+  const searchQueryClass = searchquery.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
 
   function switchLayer (type) {
-    const newStyleType = type === 'flex' ? 'flex' : 'grid'
+    const newStyleType = type === 'grid' ? 'grid' : 'list'
     SetCardStyle(newStyleType)
   }
 
@@ -42,28 +40,28 @@ export function SearchPage () {
           <div className='title-wrapper__grid-selection'>
             <button
               aria-label='switch layer to flex'
-              title='Switch to Flex View'
-              disabled={cardStyle === 'flex'}
-              className='switchlayer-button__reset-style'
-              onClick={() => switchLayer('flex')}
-            >
-              <FlexSVG
-                width={16}
-                height={16}
-                className={cardStyle === 'flex' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
-              />
-            </button>
-            <button
-              aria-label='switch later to grid'
               title='Switch to Grid View'
               disabled={cardStyle === 'grid'}
               className='switchlayer-button__reset-style'
               onClick={() => switchLayer('grid')}
             >
-              <GridSVG
+              <FlexSVG
                 width={16}
                 height={16}
                 className={cardStyle === 'grid' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
+              />
+            </button>
+            <button
+              aria-label='switch later to grid'
+              title='Switch to List View'
+              disabled={cardStyle === 'list'}
+              className='switchlayer-button__reset-style'
+              onClick={() => switchLayer('list')}
+            >
+              <GridSVG
+                width={16}
+                height={16}
+                className={cardStyle === 'list' ? 'title-wrapper__layer-switch' : 'title-wrapper__layer-switch not-active'}
               />
             </button>
           </div>
@@ -76,13 +74,8 @@ export function SearchPage () {
           </div>
           <div className='search-list__wrapper'>
             <ul className='search-list'>
-              {mockSpecialFilterTags.slice(0, 9).map((index) => {
-                return (
-                  <React.Fragment key={index}>
-                    <PersonCard layer={cardStyle} />
-                  </React.Fragment>
-                )
-              })}
+              {mockSpecialFilterTags.slice(0, 9).map((index) => <PersonCard key={index} layer={cardStyle} />
+              )}
             </ul>
           </div>
         </div>

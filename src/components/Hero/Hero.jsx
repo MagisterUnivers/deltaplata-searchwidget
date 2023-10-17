@@ -1,6 +1,6 @@
 import { SearchForm } from 'components'
-import robothiImage from '../../assets/image/robothi.png'
-import robothi2xImage from '../../assets/image/robothi@2x.png'
+import robothiImage from '../../assets/image/robot-hi.png'
+import robothi2xImage from '../../assets/image/robot-hi@2x.png'
 import './Hero.style.scss'
 
 export function Hero () {

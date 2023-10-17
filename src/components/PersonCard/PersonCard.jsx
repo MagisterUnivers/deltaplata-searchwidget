@@ -6,12 +6,12 @@ import { ReactComponent as ArrowRightSVG } from '../../assets/svg/arrow-right-re
 import { ReactComponent as CalendarSVG } from '../../assets/svg/calendar.svg'
 import { ReactComponent as MapSVG } from '../../assets/svg/map-pin-new.svg'
 import { ReactComponent as GlobeSVG } from '../../assets/svg/globe.svg'
-import britainFlag from '../../assets/image/britain_flag.png'
+import britainFlag from '../../assets/image/britain-flag.png'
 import '../Filter/Filter.style.scss'
 import './PersonCard.style.scss'
 
 export function PersonCard ({ layer, isBookmarked }) {
-  if (!layer) layer = 'flex'
+  if (!layer) layer = 'grid'
   console.log(isBookmarked)
 
   function handleShareClick () {
@@ -29,7 +29,7 @@ export function PersonCard ({ layer, isBookmarked }) {
 
   return (
     <li
-      className={layer === 'flex' ? 'search-list__item' : 'main-wrapper'}
+      className={layer === 'grid' ? 'search-list__item' : 'main-wrapper'}
     >
       <div className='search-list__item-header'>
         <div className='search-list__item-subtitle-wrapper'>
@@ -55,10 +55,10 @@ export function PersonCard ({ layer, isBookmarked }) {
         </div>
       </div>
       <div
-        className={layer === 'flex' ? '' : 'search-list__grid-container'}
+        className={layer === 'grid' ? '' : 'search-list__grid-container'}
       >
         <div
-          className={layer === 'flex' ? '' : 'search-list__item-body'}
+          className={layer === 'grid' ? '' : 'search-list__item-body'}
         >
           <div className='search-item__name-wrapper'>
             <p className='search-item__name-subtext filter-subtext'>Person</p>
@@ -103,7 +103,7 @@ export function PersonCard ({ layer, isBookmarked }) {
         </div>
         <div
           className={
-						layer === 'flex'
+						layer === 'grid'
 						  ? 'search-item__user-info__wrapper'
 						  : 'search-item__user-info__wrapper no-margin'
 					}
@@ -150,7 +150,7 @@ export function PersonCard ({ layer, isBookmarked }) {
         </div>
         <div
           className={
-						layer === 'flex'
+						layer === 'grid'
 						  ? 'search-list__item-footer'
 						  : 'search-list__item-footer button-width'
 					}

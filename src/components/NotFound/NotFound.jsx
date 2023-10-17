@@ -1,6 +1,6 @@
 import { Button } from 'components'
-import robotsearch from '../../assets/image/robotsearch.png'
-import robotsearch2x from '../../assets/image/robotsearch@2x.png'
+import robotsearch from '../../assets/image/robot-search.png'
+import robotsearch2x from '../../assets/image/robot-search@2x.png'
 import './NotFound.style.scss'
 
 export function NotFound () {

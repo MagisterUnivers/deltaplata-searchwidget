@@ -3,7 +3,7 @@ import {
   Routes,
   Navigate
 } from 'react-router'
-import { PublicRoute, Layout } from 'components'
+import { Layout } from 'components'
 import { WelcomePage } from '../pages/WelcomePage/WelcomePage'
 import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage'
 import { SearchPage } from '../pages/SearchPage/SearchPage'
@@ -17,27 +17,15 @@ export function App () {
         <Route path='/' element={<Layout />}>
           <Route
             index
-            element={
-              <PublicRoute>
-                <WelcomePage />
-              </PublicRoute>
-						}
+            element={<WelcomePage />}
           />
           <Route
             path='history'
-            element={
-              <PublicRoute>
-                <SearchHistoryPage />
-              </PublicRoute>
-						}
+            element={<SearchHistoryPage />}
           />
           <Route
             path='saved-results'
-            element={
-              <PublicRoute>
-                <SavedResultsPage />
-              </PublicRoute>
-						}
+            element={<SavedResultsPage />}
           />
           <Route path='search/:searchquery' element={<SearchPage />} />
         </Route>

@@ -29,7 +29,3 @@ export * from './Header/Header'
 export * from './NotFound/NotFound'
 export * from './Layout/Layout'
 export * from './CustomAlert/CustomAlert'
-
-// Routes
-
-export * from './routes/PublicRoute'

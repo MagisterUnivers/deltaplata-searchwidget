@@ -1,5 +1,5 @@
 // re-import
 
 export * from './basename'
-export * from './mockData'
+export * from './mockdata'
 export * from './tablecells'

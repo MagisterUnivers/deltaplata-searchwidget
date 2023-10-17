@@ -3,26 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^6.16.0"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "standard",
-    "check-format": "prettier --check .",
-    "check-lint": "eslint . --ext jsx --ext js",
-    "format": "prettier --write .",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "format": "standard --fix",
+    "lint": "standard",
+    "start": "react-scripts start",
+    "test": "npm run lint"
   },
   "browserslist": {
     "production": [
@@ -37,8 +28,10 @@
     ]
   },
   "devDependencies": {
+    "react-scripts": "5.0.1",
+    "node-sass": "^7.0.3",
+    "@svgr/webpack": "^8.1.0",
     "husky": "^8.0.3",
-    "prettier": "^3.0.3",
     "standard": "^17.1.0"
   }
 }

@@ -11,12 +11,6 @@
 	flex-direction: column;
 }
 
-/**
-  |============================
-  | Input
-  |============================
-*/
-
 .hero-searchbar__wrapper {
 	display: flex;
 	width: 100%;
@@ -43,19 +37,13 @@
 
 	&:before {
 		content: '';
-		background-image: url('../../assets/svg/searchWhite.svg');
+		background-image: url('../../assets/svg/search-white.svg');
 		background-repeat: no-repeat;
 		width: 16px;
 		height: 16px;
 		margin-right: 8px;
 	}
 }
-
-/**
-  |============================
-  | 
-  |============================
-*/
 
 .hero-container__title {
 	font-size: 18px;

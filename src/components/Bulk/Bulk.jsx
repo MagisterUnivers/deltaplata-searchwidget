@@ -36,7 +36,7 @@ export function Bulk () {
             width={16}
             height={16}
             style={{ cursor: 'pointer' }}
-            onClick={() => navigate('')}
+            onClick={() => navigate('/')}
           />
         </div>
       </div>

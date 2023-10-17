@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as Hash } from '../../assets/svg/hash.svg'
-import './HashViewComponent.style.scss'
+import './HashView.style.scss'
 
 export function HashViewComponent ({ type, data }) {
   const navigate = useNavigate()
@@ -14,8 +14,16 @@ export function HashViewComponent ({ type, data }) {
         {data.map((e) => {
           return (
             <li key={e} className='recentsearch-list__item' onClick={() => navigate('/')}>
-              <Hash width={16} height={16} className='recentsearch-list__icon' />{' '}
-              <p className='recentsearch-subtitle'>{e}</p>
+              <a
+                href='/' aria-label='link to tag view' style={{ display: 'flex', alignItems: 'center' }}
+                onClick={(event) => {
+                  event.preventDefault()
+                  navigate('/')
+                }}
+              >
+                <Hash width={16} height={16} className='recentsearch-list__icon' />{' '}
+                <p className='recentsearch-subtitle'>{e}</p>
+              </a>
             </li>
           )
         })}

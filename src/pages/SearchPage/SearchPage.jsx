@@ -17,7 +17,22 @@ import './SearchPage.style.scss'
 export function SearchPage () {
   const [cardStyle, SetCardStyle] = useState('grid')
   const { searchquery } = useParams()
-  const searchQueryClass = searchquery.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
+  const paramsArray = searchquery.split('&')
+  const params = {}
+
+  for (const param of paramsArray) {
+    const [key, value] = param.split('=')
+    params[key] = value
+  }
+
+  const value = params.q
+  const filter = params.filter
+  const country = params.country
+  console.log(country)
+  console.log(filter)
+  console.log(value)
+
+  const searchQueryClass = value.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
 
   function switchLayer (type) {
     const newStyleType = type === 'grid' ? 'grid' : 'list'
@@ -30,7 +45,7 @@ export function SearchPage () {
         <div className='title-wrapper push-content'>
           <div className='title-wrapper no-wrap'>
             <h1 className='title-wrapper__results-title'>
-              Results for: <span className={searchQueryClass}>{searchquery}</span>
+              Results for: <span className={searchQueryClass}>{value}</span>
             </h1>
           </div>
           <div className='title-wrapper no-wrap'>

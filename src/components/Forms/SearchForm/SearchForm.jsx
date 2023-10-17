@@ -13,13 +13,31 @@ export function SearchForm ({ location }) {
 
   function handleChange (e) {
     const { name, value } = e.target
-    setInputData({ ...inputData, [name]: value })
-    setSearchParams({ name: e.target.value })
-    console.log(searchParams.get('name'))
+    const trimmedValue = value.trim()
+    setInputData({ ...inputData, [name]: trimmedValue })
   }
 
   function handleSend () {
-    navigate(`/search/${inputData.search}`)
+    // const queryParams = {
+    //   q: inputData.search,
+    //   filter: 'something',
+    //   country: 'something'
+    // }
+
+    // setSearchParams(queryParams)
+
+    // navigate(`/search/${{ queryParams }}`)
+
+    const queryParams = new URLSearchParams({
+      q: inputData.search,
+      filter: 'filtertest',
+      country: 'countrytest'
+    })
+
+    const queryString = queryParams.toString()
+    const url = `/search/${queryString}`
+
+    navigate(url)
   }
 
   return (

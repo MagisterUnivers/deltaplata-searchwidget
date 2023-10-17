@@ -36,7 +36,7 @@
 
 	&:first-of-type {
 		gap: 4px;
-		// position: relative;
+		position: relative;
 	}
 }
 
@@ -68,11 +68,8 @@
   align-items: center;
 	border-radius: 4px;
   background-color: var(--main-darkBG-color);
-  // bottom: 135%;
-  // left: -56%;
-
-	top: 21.5%;
-  left: 71.6%;
+  bottom: 135%;
+  left: -56%;
 }
 
 .hint-text {

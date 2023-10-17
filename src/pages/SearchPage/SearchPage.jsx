@@ -13,6 +13,7 @@ import '../../components/Container/Container.style.scss'
 import '../WelcomePage/WelcomePage.style.scss'
 import '../../components/Section/Section.style.scss'
 import './SearchPage.style.scss'
+import '../../components/SpecialFilter/SpecialFilter.style.scss'
 
 export function SearchPage () {
   const [cardStyle, SetCardStyle] = useState('grid')
@@ -43,12 +44,15 @@ export function SearchPage () {
     <section className='section' aria-label='search section'>
       <div className='container no-flex'>
         <div className='title-wrapper push-content'>
-          <div className='title-wrapper no-wrap'>
-            <h1 className='title-wrapper__results-title'>
-              Results for: <span className={searchQueryClass}>{value}</span>
-            </h1>
+          <div className='title-wrapper no-wrap' style={{ justifyContent: 'flex-start' }}>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <h1 className='title-wrapper__results-title'>
+                Results for: <span className={searchQueryClass}>{value}</span>
+              </h1>
+              <span className='special-filter__title-amount__border'><p className='special-filter__title-amount'>1</p></span>
+            </div>
           </div>
-          <div className='title-wrapper no-wrap'>
+          <div className='title-wrapper no-wrap' style={{ justifyContent: 'flex-end' }}>
             <Filter type='filter' data={MockFilterOptions} />
             <Filter type='sort' data={mockSortOptions} />
             <div className='title-wrapper__grid-selection'>

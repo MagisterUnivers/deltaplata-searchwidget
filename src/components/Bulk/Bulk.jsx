@@ -21,7 +21,7 @@ export function Bulk () {
   function hideHint () {
     hintContainerRef.current = setTimeout(() => {
       setIsHintVisible(false)
-    }, 2000)
+    }, 20000000)
   }
 
   function displayAlert () {

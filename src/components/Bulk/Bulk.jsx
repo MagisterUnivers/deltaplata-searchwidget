@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import { CustomAlert } from 'components'
@@ -12,10 +12,30 @@ export function Bulk () {
   const navigate = useNavigate()
   const [showAlert, setShowAlert] = useState(false)
   const [isHintVisible, setIsHintVisible] = useState(false)
+  const hintContainerRef = useRef(null)
 
-  function toggleHint () {
+  function toggleHint (event) {
+    event.stopPropagation()
     setIsHintVisible(!isHintVisible)
   };
+
+  useEffect(() => {
+    function handleClickOutside (event) {
+      if (hintContainerRef.current && !hintContainerRef.current.contains(event.target)) {
+        setIsHintVisible(false)
+      }
+    }
+
+    if (isHintVisible) {
+      document.addEventListener('click', handleClickOutside)
+    } else {
+      document.removeEventListener('click', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [isHintVisible])
 
   function displayAlert () {
     setShowAlert(true)
@@ -34,10 +54,10 @@ export function Bulk () {
             width={14}
             height={14}
             className='bulk-header__hint'
-            onClick={toggleHint}
+            onClick={(event) => toggleHint(event)}
           />
           {isHintVisible && (
-            <div className='hint-container'>
+            <div className='hint-container' ref={hintContainerRef}>
               <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span onClick={() => displayAlert()} className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
               <Polygon width={16} height={10.82} className='hint-polygon' />
             </div>)}

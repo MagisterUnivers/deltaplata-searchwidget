@@ -1,10 +1,9 @@
 import './CustomAlert.style.scss'
 
-export function CustomAlert ({ message, onClose }) {
+export function CustomAlert ({ message, className }) {
   return (
-    <div className='custom-alert'>
+    <div className={className}>
       <p>{message}</p>
-      <button onClick={onClose}>Close</button>
     </div>
   )
 }

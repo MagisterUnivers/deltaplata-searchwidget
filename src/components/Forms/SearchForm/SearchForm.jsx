@@ -1,10 +1,9 @@
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { ReactComponent as SearchLoop } from '../../../assets/svg/search.svg'
 import '../../Header/Header.style.scss'
 
 export function SearchForm ({ location }) {
-  const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
 
   const [inputData, setInputData] = useState({
@@ -18,16 +17,6 @@ export function SearchForm ({ location }) {
   }
 
   function handleSend () {
-    // const queryParams = {
-    //   q: inputData.search,
-    //   filter: 'something',
-    //   country: 'something'
-    // }
-
-    // setSearchParams(queryParams)
-
-    // navigate(`/search/${{ queryParams }}`)
-
     const queryParams = new URLSearchParams({
       q: inputData.search,
       filter: 'filtertest',

@@ -1,10 +1,32 @@
 .custom-alert {
   position: fixed;
-  top: 0;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f0f0f0;
+  background-color: var(--main-darkBG-color);
+  color: var(--main-white-color);
   padding: 10px;
   border: 1px solid #ccc;
+  opacity: 0;
+  transition: opacity 150ms ease; 
+  animation: fadeIn 150ms ease forwards;
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-alert.hide {
+  animation: fadeOut 150ms ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0; 
+  }
+}

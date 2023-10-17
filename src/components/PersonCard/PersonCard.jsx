@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { mockSearchHistory } from 'constants'
+import { CustomAlert } from 'components'
 import { ReactComponent as ShareSVG } from '../../assets/svg/share.svg'
 import { ReactComponent as BookmarkSVG } from '../../assets/svg/bookmark.svg'
 import { ReactComponent as ArrowRightSVG } from '../../assets/svg/arrow-right-rendered.svg'
@@ -11,6 +13,10 @@ import '../Filter/Filter.style.scss'
 import './PersonCard.style.scss'
 
 export function PersonCard ({ layer, isBookmarked }) {
+  const [showAlert, setShowAlert] = useState(false)
+  const [alertTimer, setAlertTimer] = useState(null)
+  const [messageAlert, setMessageAlert] = useState('')
+
   if (!layer) layer = 'grid'
   console.log(isBookmarked)
 
@@ -18,12 +24,39 @@ export function PersonCard ({ layer, isBookmarked }) {
     const randomText = 'https://www.demowidget.com/search/somelement1/'
 
     await navigator.clipboard.writeText(randomText)
-    alert('Link added to your clipboard: ' + randomText)
+    displayAlert('Link added to your clipboard: ' + randomText)
   }
 
+  function displayAlert (message) {
+    setMessageAlert(message)
+    setShowAlert(true)
+
+    if (alertTimer) {
+      clearTimeout(alertTimer)
+    }
+
+    const timer = setTimeout(() => {
+      setShowAlert(false)
+    }, 3000)
+
+    setAlertTimer(timer)
+  }
+
+  useEffect(() => {
+    return () => {
+      if (alertTimer) {
+        clearTimeout(alertTimer)
+      }
+    }
+  }, [])
+
   function handleBookmarkClick (type) {
-    if (type === true) alert('Removed from Bookmarks')
-    if (type === false) alert('Added to Bookmarks')
+    if (type === true) {
+      displayAlert('Removed from Bookmarks')
+    }
+    if (type === false) {
+      displayAlert('Added to Bookmarks')
+    }
   }
 
   return (
@@ -51,6 +84,11 @@ export function PersonCard ({ layer, isBookmarked }) {
               onClick={() => isBookmarked ? handleBookmarkClick(true) : handleBookmarkClick(false)}
             />
           </div>
+          {showAlert &&
+            createPortal(
+              <CustomAlert message={messageAlert} className={`custom-alert ${showAlert ? '' : 'hide'}`} />,
+              document.querySelector('#root')
+            )}
         </div>
       </div>
       <div

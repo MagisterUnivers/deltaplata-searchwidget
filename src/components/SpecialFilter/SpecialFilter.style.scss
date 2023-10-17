@@ -1,6 +1,7 @@
 .special-filter__container {
 	display: flex;
 	width: 285px;
+	height: -webkit-fill-available;
 	padding: 16px;
 	flex-direction: column;
 	align-items: flex-start;

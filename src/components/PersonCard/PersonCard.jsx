@@ -18,7 +18,6 @@ export function PersonCard ({ layer, isBookmarked }) {
   const [messageAlert, setMessageAlert] = useState('')
 
   if (!layer) layer = 'grid'
-  console.log(isBookmarked)
 
   async function handleShareClick () {
     const randomText = 'https://www.demowidget.com/search/somelement1/'

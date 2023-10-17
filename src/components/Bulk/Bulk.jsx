@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
+import { CustomAlert } from 'components'
 import { ReactComponent as Upload } from '../../assets/svg/upload.svg'
 import { ReactComponent as ArrowRight } from '../../assets/svg/arrow-right.svg'
 import { ReactComponent as Hint } from '../../assets/svg/info.svg'
@@ -8,11 +10,20 @@ import './Bulk.style.scss'
 
 export function Bulk () {
   const navigate = useNavigate()
+  const [showAlert, setShowAlert] = useState(false)
   const [isHintVisible, setIsHintVisible] = useState(false)
 
   function toggleHint () {
     setIsHintVisible(!isHintVisible)
   };
+
+  function displayAlert () {
+    setShowAlert(true)
+
+    setTimeout(() => {
+      setShowAlert(false)
+    }, 3000)
+  }
 
   return (
     <div className='bulk-uploader'>
@@ -27,9 +38,14 @@ export function Bulk () {
           />
           {isHintVisible && (
             <div className='hint-container'>
-              <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span onClick={() => console.log('File sended')} className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
+              <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span onClick={() => displayAlert()} className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
               <Polygon width={16} height={10.82} className='hint-polygon' />
             </div>)}
+          {showAlert &&
+            createPortal(
+              <CustomAlert message='File sended' className={`custom-alert ${showAlert ? '' : 'hide'}`} />,
+              document.querySelector('#root')
+            )}
         </div>
         <div className='bulk-header__container'>
           <ArrowRight

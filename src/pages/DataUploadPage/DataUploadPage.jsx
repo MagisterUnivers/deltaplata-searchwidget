@@ -1,5 +1,4 @@
-import { BulkCategorySelector, BulkSampleDownloader, BulkUploader } from 'components'
-import { ReactComponent as HintSVG } from '../../assets/svg/info.svg'
+import { BulkCategorySelector, BulkSampleDownloader, BulkUploader, TitleWithTooltip } from 'components'
 import '../../components/BulkSampleDownloader/BulkSampleDownloader.style.scss'
 import './DataUploadPage.style.scss'
 
@@ -16,11 +15,8 @@ function DataUploadPage () {
         </div>
         <div className='data-uploader__content-container'>
           <div className='uploader-wrapper'>
-            <div className='uploader-wrapper__title'>
-              <h2 className='uploader-wrapper__text'>Address Bulk Upload</h2>
-              <button className='uploader-wrapper__button'>
-                <HintSVG width={14} height={14} className='uploader-wrapper__icon' />
-              </button>
+            <div className='bulk-header__container'>
+              <TitleWithTooltip title='Address Bulk Upload' />
             </div>
             <p className='uploader-wrapper__subtext'>Drag and drop your files or select files from your local computer</p>
             <BulkUploader />

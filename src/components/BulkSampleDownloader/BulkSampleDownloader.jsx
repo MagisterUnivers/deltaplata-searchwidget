@@ -1,4 +1,5 @@
 import { mockButtonCategory } from 'helpers'
+import { TitleWithTooltip } from 'components'
 import { ReactComponent as DownloadSVG } from '../../assets/svg/download-page.svg'
 import Excel from '../../assets/image/excel-page.png'
 import './BulkSampleDownloader.style.scss'
@@ -7,10 +8,7 @@ export function BulkSampleDownloader () {
   return (
     <div className='bulk-sample__wrapper'>
       <div className='bulk-sample__gap'>
-        <div>
-          <h2>Download sample CSV file</h2>
-          <img />
-        </div>
+        <TitleWithTooltip title='Download sample CSV file' sampleDownloader={Boolean} />
         <div>
           <ul className='bulk-sample__list'>
             {mockButtonCategory.map((item) => {

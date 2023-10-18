@@ -14,6 +14,7 @@ export * from './Title/Title'
 export * from './BulkCategorySelector/BulkCategorySelector'
 export * from './BulkSampleDownloader/BulkSampleDownloader'
 export * from './BulkUploader/BulkUploader'
+export * from './TitleWithTooltip/TitleWithTooltip'
 
 // Forms
 

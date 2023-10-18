@@ -27,11 +27,6 @@ export function SearchPage () {
   }
 
   const value = params.searchquery
-  const filter = params.filter
-  const country = params.country
-  console.log(country)
-  console.log(filter)
-  console.log(value)
 
   function switchLayer (type) {
     const newStyleType = type === 'grid' ? 'grid' : 'list'

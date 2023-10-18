@@ -148,7 +148,7 @@ export const mockCountryFilter = [
   'Iceland',
   'India',
   'Indonesia',
-  'Iran, Islamic Republic Of',,
+  'Iran, Islamic Republic Of',
   'Iraq',
   'Ireland',
   'Isle of Man',

@@ -31,10 +31,11 @@
 	gap: 8px;
 	transition: background-color 150ms ease-out, color 150ms ease-out;
 	border-radius: 50px;
-	border: 1px solid var(--main-border-color);
+	border: 1px solid var(--main-darkBG-color);
 	
 	&:hover {
 		background-color: var(--main-darkBG-color);
+		border: 1px solid var(--main-white-color);
 		color: var(--main-white-color);
 
 		.color-black {
@@ -62,5 +63,5 @@
 
 .color-black {
 	transition: fill 150ms ease-out;
-	fill: var(--main-mute-color);
+	fill: var(--main-heading-color);
 }

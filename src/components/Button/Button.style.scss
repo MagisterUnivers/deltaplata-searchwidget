@@ -32,6 +32,7 @@
 	transition: background-color 150ms ease-out, color 150ms ease-out;
 	border-radius: 50px;
 	border: 1px solid var(--main-darkBG-color);
+	background-color: var(--main-white-color);
 	
 	&:hover {
 		background-color: var(--main-darkBG-color);

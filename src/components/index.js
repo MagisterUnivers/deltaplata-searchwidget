@@ -11,6 +11,9 @@ export * from './PersonCard/PersonCard'
 export * from './Select/Select'
 export * from './Table/SearchHistoryTable/SearchHistoryTable'
 export * from './Title/Title'
+export * from './BulkCategorySelector/BulkCategorySelector'
+export * from './BulkSampleDownloader/BulkSampleDownloader'
+export * from './BulkUploader/BulkUploader'
 
 // Forms
 

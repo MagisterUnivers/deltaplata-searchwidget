@@ -386,3 +386,5 @@ export const mockSearchHistory = [
     tags: ['Bank']
   }
 ]
+
+export const mockButtonCategory = ['Address', 'Vessels', 'Bank Account', 'Company, Organization', 'Crypto Wallet', 'Person', 'Security']

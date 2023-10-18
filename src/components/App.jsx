@@ -8,6 +8,7 @@ import { WelcomePage } from '../pages/WelcomePage/WelcomePage'
 import { SearchHistoryPage } from '../pages/SearchHistoryPage/SearchHistoryPage'
 import { SearchPage } from '../pages/SearchPage/SearchPage'
 import { SavedResultsPage } from '../pages/SavedResultsPage/SavedResultsPage'
+import DataUploadPage from 'pages/DataUploadPage/DataUploadPage'
 import '../index.css'
 
 export function App () {
@@ -28,6 +29,7 @@ export function App () {
             element={<SavedResultsPage />}
           />
           <Route path='search/:searchquery' element={<SearchPage />} />
+          <Route path='upload' element={<DataUploadPage />} />
         </Route>
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>

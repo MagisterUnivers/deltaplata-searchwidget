@@ -13,7 +13,7 @@ export function SavedResultsPage ({ search }) {
   }, [])
 
   return (
-    <section className='section' aria-label='search history section'>
+    <section className='section' aria-label='search results section'>
       <div className='container no-flex'>
         <div className='hero-title__container push-content'>
           <Title text='Saved results' quantity={elementCount} />

@@ -102,11 +102,11 @@ export function PersonCard ({ layer, isBookmarked }) {
           </div>
           <ul className='search-item__tags-list'>
             {mockSearchHistory.map((item) => {
-						  if (item.name === 'Nora Frey Draeger') {
-						    const tags = item.tags
+              if (item.name === 'Nora Frey Draeger') {
+                const tags = item.tags
 
                 if (tags.length > 4) {
-						      const remainingTags = tags.slice(4)
+                  const remainingTags = tags.slice(4)
                   return (
                     <React.Fragment key={tags}>
                       {tags.slice(0, 4).map((tag, tagIndex) => (
@@ -123,73 +123,73 @@ export function PersonCard ({ layer, isBookmarked }) {
                       </li>
                     </React.Fragment>
                   )
-						    } else {
-						      return tags.map((tag, tagIndex) => (
-  <li className='search-item__tags-item' key={tagIndex}>
-    <p className='search-item__tag search-item__name-subtext filter-subtext'>
-      {tag}
-    </p>
-  </li>
-						      ))
+                } else {
+                  return tags.map((tag, tagIndex) => (
+                    <li className='search-item__tags-item' key={tagIndex}>
+                      <p className='search-item__tag search-item__name-subtext filter-subtext'>
+                        {tag}
+                      </p>
+                    </li>
+                  ))
                 }
-						  }
-						  return null
+              }
+              return null
             })}
           </ul>
         </div>
         <div
           className={
-						layer === 'grid'
-						  ? 'search-item__user-info__wrapper'
-						  : 'search-item__user-info__wrapper no-margin'
-					}
+ layer === 'grid'
+   ? 'search-item__user-info__wrapper'
+   : 'search-item__user-info__wrapper no-margin'
+}
         >
           {mockSearchHistory.map((item, index) => {
-					  const { nationality, birthdate, address } = item
+            const { nationality, birthdate, address } = item
 
             if (item.name === 'Nora Frey Draeger') {
-					    return (
-  <React.Fragment key={index}>
-    <div className='search-item__flex' key={nationality}>
-      {nationality === 'British'
-        ? (
-          <>
-            <img
-              src={britainFlag}
-              alt='british national flag'
-              width={16}
-              height={16}
-            />
-            <p className='filter-subtext'>{nationality}</p>
-          </>
-          )
-        : (
-          <React.Fragment key={index}>
-            <GlobeSVG width={16} height={16} />
-            <p className='filter-subtext'>{nationality}</p>
-          </React.Fragment>
-          )}
-    </div>
-    <div className='search-item__flex' key={birthdate}>
-      <CalendarSVG width={16} height={16} />
-      <p className='filter-subtext'>{birthdate}</p>
-    </div>
-    <div className='search-item__flex' key={address}>
-      <MapSVG width={16} height={16} />
-      <p className='filter-subtext'>{address}</p>
-    </div>
-  </React.Fragment>
-					    )
-					  }
-					  return null
+              return (
+                <React.Fragment key={index}>
+                  <div className='search-item__flex' key={nationality}>
+                    {nationality === 'British'
+                      ? (
+                        <>
+                          <img
+                            src={britainFlag}
+                            alt='british national flag'
+                            width={16}
+                            height={16}
+                          />
+                          <p className='filter-subtext'>{nationality}</p>
+                        </>
+                        )
+                      : (
+                        <React.Fragment key={index}>
+                          <GlobeSVG width={16} height={16} />
+                          <p className='filter-subtext'>{nationality}</p>
+                        </React.Fragment>
+                        )}
+                  </div>
+                  <div className='search-item__flex' key={birthdate}>
+                    <CalendarSVG width={16} height={16} />
+                    <p className='filter-subtext'>{birthdate}</p>
+                  </div>
+                  <div className='search-item__flex' key={address}>
+                    <MapSVG width={16} height={16} />
+                    <p className='filter-subtext'>{address}</p>
+                  </div>
+                </React.Fragment>
+              )
+            }
+            return null
           })}
         </div>
         <div
           className={
-						layer === 'grid'
-						  ? 'search-list__item-footer'
-						  : 'search-list__item-footer button-width'
-					}
+layer === 'grid'
+  ? 'search-list__item-footer'
+  : 'search-list__item-footer button-width'
+}
         >
           <button
             type='button'

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { tableCellsName, mockSearchHistory } from 'helpers'
-import { ReactComponent as ArrowRight } from '../../../assets/svg/arrow-right.svg'
+import { ReactComponent as ArrowRight } from '../../../assets/svg/arrow-right-rendered.svg'
 import './SearchhistoryTable.style.scss'
 
 export function SearchHistoryTable ({ tableDate, date }) {
@@ -31,8 +31,12 @@ export function SearchHistoryTable ({ tableDate, date }) {
                 className='table-link__item link-pointer'
                 onClick={() => navigate('/')}
               >
-                <p className='table-subtext__link'>Search again</p>
-                <ArrowRight width={16} height={16} />
+                <a
+                  href='/' aria-label='link to tag view' className='table-link'
+                >
+                  <p className='table-subtext__link'>Search again</p>
+                  <ArrowRight width={16} height={16} className='table-link__icon' title='arrow-right' />
+                </a>
               </td>
             </tr>
           ))}

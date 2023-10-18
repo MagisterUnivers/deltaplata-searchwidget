@@ -24,7 +24,7 @@ export function TitleWithTooltip ({ title, sampleDownloader }) {
           width={14}
           height={14}
         />
-        <div className='hint-container' style={sampleDownloader ? { right: '43.5px' } : { right: '-19.5px' }}>
+        <div className='hint-container'>
           <div className='hint-container__content-wrapper'>
             <p className='hint-text'>Search with whatever information field you have. Upload your CSV file. Please <span onClick={() => displayAlert()} className='hint-text hint-text__underline'>download the CSV sample here.</span></p>
             <Polygon width={16} height={10.82} className='hint-polygon' />

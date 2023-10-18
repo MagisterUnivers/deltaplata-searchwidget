@@ -387,4 +387,4 @@ export const mockSearchHistory = [
   }
 ]
 
-export const mockButtonCategory = ['Address', 'Vessels', 'Bank Account', 'Company, Organization', 'Crypto Wallet', 'Person', 'Security']
+export const mockButtonCategory = ['Address', 'Vessels', 'Bank Account', 'Company', 'Crypto Wallet', 'Person', 'Security']

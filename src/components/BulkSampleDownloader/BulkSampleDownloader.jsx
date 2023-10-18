@@ -22,7 +22,6 @@ export function BulkSampleDownloader () {
                 </li>
               )
             })}
-
           </ul>
         </div>
       </div>

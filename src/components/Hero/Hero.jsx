@@ -3,7 +3,7 @@ import robotHiImage from '../../assets/image/robot-hi.png'
 import robotHi2xImage from '../../assets/image/robot-hi@2x.png'
 import './Hero.style.scss'
 
-export function Hero () {
+export function Hero ({ filterValue, sortValue, countryValue, specialValue }) {
   return (
     <div className='hero-container'>
       <picture>
@@ -24,7 +24,7 @@ export function Hero () {
           Please enter the keyword you want to search for
         </p>
       </div>
-      <SearchForm location='hero' />
+      <SearchForm location='hero' filterValue={filterValue} sortValue={sortValue} countryValue={countryValue} specialValue={specialValue} />
     </div>
   )
 }

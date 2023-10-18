@@ -6,15 +6,21 @@ import { CountryFilter } from 'components'
 import { ReactComponent as Close } from '../../assets/svg/close.svg'
 import './SpecialFilter.style.scss'
 
-export function SpecialFilter () {
+export function SpecialFilter ({ onCountryChange, countryValue, onChange }) {
   const [checkedItems, setCheckedItems] = useState({})
 
   function handleCheckboxChange (e) {
     const { id, checked } = e.target
 
-    setCheckedItems({
-      ...checkedItems,
-      [id]: checked
+    setCheckedItems(prevCheckedItems => {
+      const updatedCheckedItems = {
+        ...prevCheckedItems,
+        [id]: checked
+      }
+
+      onChange(updatedCheckedItems)
+
+      return updatedCheckedItems
     })
   }
 
@@ -71,7 +77,7 @@ export function SpecialFilter () {
         <Close width={16} height={16} className='special-filter__icon' />
         Remove all filter
       </button>
-      <CountryFilter />
+      <CountryFilter onChange={onCountryChange} value={countryValue} />
     </div>
   )
 }

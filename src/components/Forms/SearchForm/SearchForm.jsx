@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { ReactComponent as SearchLoop } from '../../../assets/svg/search.svg'
 import '../../Header/Header.style.scss'
 
-export function SearchForm ({ location }) {
+export function SearchForm ({ location, filterValue, sortValue, countryValue, specialValue }) {
   const navigate = useNavigate()
 
   const [inputData, setInputData] = useState({
@@ -17,10 +17,15 @@ export function SearchForm ({ location }) {
   }
 
   function handleSend () {
+    const specialKeys = Object.keys(specialValue)
+    const keysString = specialKeys.join(', ')
+
     const queryParams = new URLSearchParams({
-      q: inputData.search,
-      filter: 'filtertest',
-      country: 'countrytest'
+      searchquery: inputData.search,
+      filter: filterValue,
+      sort: sortValue,
+      specialFilter: keysString,
+      country: countryValue
     })
 
     const queryString = queryParams.toString()

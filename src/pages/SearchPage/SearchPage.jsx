@@ -26,7 +26,7 @@ export function SearchPage () {
     params[key] = value
   }
 
-  const value = params.q
+  const value = params.searchquery
   const filter = params.filter
   const country = params.country
   console.log(country)

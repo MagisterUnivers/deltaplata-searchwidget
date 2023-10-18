@@ -1,7 +1,7 @@
 import React from 'react'
 import './Select.style.scss'
 
-export function Select ({ type, data }) {
+export function Select ({ type, data, onChange, value }) {
   let text
 
   switch (type) {
@@ -19,7 +19,7 @@ export function Select ({ type, data }) {
   }
 
   return (
-    <select className='filter-select__menu'>
+    <select className='filter-select__menu' onChange={onChange} value={value}>
       <option defaultValue={text}>
         {text}
       </option>

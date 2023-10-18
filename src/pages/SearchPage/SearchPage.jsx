@@ -33,8 +33,6 @@ export function SearchPage () {
   console.log(filter)
   console.log(value)
 
-  const searchQueryClass = value.length > 28 ? 'quoted-text' : 'title-wrapper__searchquery'
-
   function switchLayer (type) {
     const newStyleType = type === 'grid' ? 'grid' : 'list'
     SetCardStyle(newStyleType)
@@ -47,8 +45,9 @@ export function SearchPage () {
           <div className='title-wrapper no-wrap' style={{ justifyContent: 'flex-start' }}>
             <div style={{ display: 'flex', gap: '8px' }}>
               <h1 className='title-wrapper__results-title'>
-                Results for: <span className={searchQueryClass}>{value}</span>
+                Results for:
               </h1>
+              <span className='title-wrapper__searchquery'>{value}</span>
               <span className='special-filter__title-amount__border'><p className='special-filter__title-amount'>1</p></span>
             </div>
           </div>

@@ -24,7 +24,7 @@ export function App () {
             element={<SearchHistoryPage />}
           />
           <Route
-            path='saved-results'
+            path='bookmarks'
             element={<SavedResultsPage />}
           />
           <Route path='search/:searchquery' element={<SearchPage />} />

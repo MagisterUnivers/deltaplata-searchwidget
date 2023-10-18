@@ -15,7 +15,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 150px;
+	max-width: 369px;
 
 	&:before,
 	&:after {
@@ -25,10 +25,6 @@
 	&:after {
 		content: '\201D';
 	}
-}
-
-.quoted-text {
-	quotes: '\201C' '\201D';
 }
 
 .search-list {

@@ -15,22 +15,22 @@ export function Select ({ type, data }) {
       text = 'Netherlands'
       break
     default:
-		  text = 'Type'
+      text = 'Type'
   }
 
   return (
     <select className='filter-select__menu'>
-      <option value='default'>
+      <option defaultValue={text}>
         {text}
       </option>
       {data?.map((data, index) => {
-			  return (
-  <React.Fragment key={index}>
-    <option value={data}>
-      {data}
-    </option>
-  </React.Fragment>
-			  )
+        return (
+          <React.Fragment key={index}>
+            <option value={data}>
+              {data}
+            </option>
+          </React.Fragment>
+        )
       })}
     </select>
   )
